@@ -1,0 +1,984 @@
+patient_name,age,gender,condition,medication,visit_date,cholesterol,email,phone_number,systolic_bp,diastolic_bp,age_group,cholesterol_imputed,systolic_bp_imputed,diastolic_bp_imputed
+david lee,25,other,heart disease,metformin,2020-01-15,200,name@hospital.org,555-555-5555,140,90,<30,No,No,No
+emily davis,40,male,diabetes,none,2018-04-05,200,Unknown,Unknown,120,80,30-44,No,No,No
+laura martinez,35,other,asthma,metformin,2019-12-01,160,contact@domain.com,Unknown,110,70,30-44,No,No,No
+michael wilson,40,male,diabetes,albuterol,2020-01-15,180,name@hospital.org,555-555-5555,110,70,30-44,Yes,No,No
+david lee,40,female,asthma,none,2020-02-20,180,Unknown,Unknown,110,70,30-44,No,No,No
+mary clark,40,male,hypertension,metformin,2019-03-25,180,Unknown,Unknown,140,90,30-44,No,No,No
+robert brown,40,male,hypertension,lisinopril,2020-02-20,180,name@hospital.org,Unknown,120,80,30-44,Yes,No,No
+laura martinez,60,other,heart disease,none,2020-01-15,180,name@hospital.org,Unknown,140,90,60-74,No,No,No
+michael wilson,40,female,Unknown,albuterol,2020-02-20,220,patient@example.com,555-555-5555,140,90,30-44,No,No,No
+emily davis,25,male,asthma,atorvastatin,2018-04-05,200,Unknown,Unknown,120,80,<30,No,No,No
+laura martinez,40,male,Unknown,atorvastatin,2020-02-20,200,name@hospital.org,Unknown,130,85,30-44,No,No,No
+laura martinez,40,male,diabetes,albuterol,2019-03-25,180,Unknown,123-456-7890,140,90,30-44,No,No,No
+robert brown,25,female,asthma,albuterol,2019-03-25,200,name@hospital.org,Unknown,130,85,<30,Yes,No,No
+sarah johnson,70,female,hypertension,albuterol,2019-12-01,220,Unknown,Unknown,130,85,60-74,No,No,No
+michael wilson,35,female,heart disease,atorvastatin,2019-03-25,180,Unknown,123-456-7890,110,70,30-44,No,No,No
+jane smith,60,female,asthma,albuterol,2020-02-20,200,Unknown,Unknown,120,80,60-74,No,No,No
+laura martinez,70,female,asthma,metformin,2019-03-25,160,contact@domain.com,098-765-4321,130,85,60-74,No,No,No
+sarah johnson,25,other,diabetes,none,2020-01-15,180,name@hospital.org,098-765-4321,120,80,<30,Yes,No,No
+jane smith,70,male,heart disease,none,2019-03-25,160,contact@domain.com,Unknown,110,70,60-74,No,No,No
+michael wilson,35,male,hypertension,lisinopril,2018-04-05,180,Unknown,Unknown,120,80,30-44,No,No,No
+john doe,25,male,asthma,lisinopril,2020-01-15,200,contact@domain.com,098-765-4321,140,90,<30,No,No,No
+mary clark,70,male,asthma,none,2019-12-01,220,Unknown,555-555-5555,130,85,60-74,No,No,No
+sarah johnson,60,male,diabetes,metformin,2018-04-05,160,Unknown,555-555-5555,120,80,60-74,No,No,No
+james taylor,60,male,Unknown,atorvastatin,2020-02-20,220,Unknown,123-456-7890,120,80,60-74,No,Yes,Yes
+john doe,40,male,hypertension,atorvastatin,2020-02-20,200,contact@domain.com,Unknown,120,80,30-44,No,No,No
+mary clark,70,male,heart disease,metformin,2020-02-20,160,name@hospital.org,Unknown,130,85,60-74,No,No,No
+robert brown,40,other,asthma,atorvastatin,2018-04-05,220,contact@domain.com,098-765-4321,110,70,30-44,No,No,No
+david lee,70,male,asthma,albuterol,2018-04-05,220,name@hospital.org,Unknown,110,70,60-74,No,No,No
+emily davis,25,other,hypertension,none,2018-04-05,160,name@hospital.org,Unknown,130,85,<30,No,No,No
+james taylor,25,female,Unknown,none,2020-01-15,200,Unknown,098-765-4321,140,90,<30,No,No,No
+robert brown,70,male,asthma,metformin,2020-01-15,220,contact@domain.com,098-765-4321,140,90,60-74,No,No,No
+michael wilson,35,female,hypertension,atorvastatin,2020-02-20,180,name@hospital.org,Unknown,110,70,30-44,No,No,No
+robert brown,60,female,diabetes,lisinopril,2019-03-25,160,Unknown,098-765-4321,110,70,60-74,No,No,No
+david lee,25,female,Unknown,lisinopril,2020-02-20,200,name@hospital.org,123-456-7890,130,85,<30,Yes,No,No
+michael wilson,60,other,heart disease,atorvastatin,2019-12-01,180,Unknown,123-456-7890,140,90,60-74,Yes,No,No
+james taylor,25,female,asthma,lisinopril,2020-01-15,200,contact@domain.com,Unknown,110,70,<30,No,No,No
+david lee,40,female,hypertension,metformin,2018-04-05,180,contact@domain.com,Unknown,140,90,30-44,No,No,No
+jane smith,40,female,diabetes,metformin,2020-01-15,220,contact@domain.com,123-456-7890,110,70,30-44,No,No,No
+emily davis,25,male,heart disease,atorvastatin,2018-04-05,200,name@hospital.org,123-456-7890,120,80,<30,Yes,No,No
+james taylor,60,male,hypertension,lisinopril,2019-12-01,200,patient@example.com,Unknown,120,80,60-74,No,Yes,Yes
+jane smith,40,other,hypertension,metformin,2019-12-01,180,name@hospital.org,555-555-5555,120,80,30-44,No,No,No
+mary clark,25,other,heart disease,metformin,2020-01-15,180,name@hospital.org,098-765-4321,110,70,<30,No,No,No
+james taylor,35,male,diabetes,albuterol,2018-04-05,200,Unknown,123-456-7890,130,85,30-44,No,Yes,Yes
+mary clark,40,other,diabetes,albuterol,2019-12-01,200,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+michael wilson,25,male,Unknown,metformin,2020-02-20,220,name@hospital.org,Unknown,110,70,<30,No,No,No
+jane smith,40,female,asthma,atorvastatin,2020-02-20,200,Unknown,555-555-5555,110,70,30-44,No,No,No
+emily davis,35,female,heart disease,none,2018-04-05,220,Unknown,Unknown,140,90,30-44,No,No,No
+david lee,70,other,heart disease,none,2020-01-15,220,name@hospital.org,Unknown,110,70,60-74,No,No,No
+laura martinez,40,male,heart disease,metformin,2019-12-01,160,patient@example.com,Unknown,130,85,30-44,No,No,No
+robert brown,40,male,diabetes,metformin,2020-01-15,180,Unknown,555-555-5555,110,70,30-44,No,No,No
+john doe,35,other,asthma,metformin,2020-02-20,180,contact@domain.com,Unknown,130,85,30-44,No,No,No
+emily davis,40,male,Unknown,atorvastatin,2019-12-01,180,name@hospital.org,123-456-7890,110,70,30-44,No,No,No
+jane smith,35,female,hypertension,albuterol,2020-01-15,160,name@hospital.org,555-555-5555,140,90,30-44,No,No,No
+laura martinez,25,other,hypertension,metformin,2019-03-25,220,Unknown,123-456-7890,130,85,<30,No,No,No
+emily davis,35,other,heart disease,metformin,2018-04-05,220,Unknown,555-555-5555,120,80,30-44,No,No,No
+jane smith,35,male,asthma,lisinopril,2018-04-05,200,Unknown,123-456-7890,130,85,30-44,No,No,No
+sarah johnson,40,other,diabetes,atorvastatin,2019-03-25,160,Unknown,555-555-5555,140,90,30-44,No,No,No
+sarah johnson,35,male,asthma,metformin,2020-02-20,200,contact@domain.com,Unknown,130,85,30-44,No,No,No
+mary clark,35,male,asthma,lisinopril,2019-12-01,160,Unknown,098-765-4321,110,70,30-44,No,No,No
+emily davis,70,male,diabetes,none,2018-04-05,200,Unknown,Unknown,110,70,60-74,No,No,No
+sarah johnson,25,male,heart disease,metformin,2019-03-25,200,Unknown,123-456-7890,140,90,<30,Yes,No,No
+jane smith,40,male,asthma,metformin,2019-03-25,180,Unknown,Unknown,130,85,30-44,No,Yes,Yes
+mary clark,70,other,hypertension,lisinopril,2020-02-20,180,patient@example.com,Unknown,110,70,60-74,No,No,No
+jane smith,60,female,diabetes,atorvastatin,2020-02-20,220,patient@example.com,098-765-4321,120,80,60-74,No,No,No
+mary clark,25,female,Unknown,metformin,2020-01-15,200,name@hospital.org,123-456-7890,140,90,<30,Yes,No,No
+emily davis,25,other,heart disease,none,2018-04-05,180,name@hospital.org,Unknown,130,85,<30,No,No,No
+laura martinez,60,other,diabetes,metformin,2020-01-15,220,Unknown,555-555-5555,130,85,60-74,No,No,No
+david lee,35,female,Unknown,none,2019-03-25,200,Unknown,Unknown,120,80,30-44,Yes,No,No
+james taylor,70,female,Unknown,albuterol,2019-12-01,180,contact@domain.com,123-456-7890,110,70,60-74,No,No,No
+laura martinez,40,female,asthma,albuterol,2019-12-01,200,contact@domain.com,Unknown,140,90,30-44,No,No,No
+michael wilson,40,female,asthma,none,2020-02-20,160,patient@example.com,123-456-7890,120,80,30-44,No,No,No
+jane smith,40,female,asthma,atorvastatin,2019-12-01,200,name@hospital.org,555-555-5555,110,70,30-44,Yes,No,No
+michael wilson,60,male,diabetes,metformin,2019-12-01,220,patient@example.com,098-765-4321,140,90,60-74,No,No,No
+laura martinez,25,other,diabetes,metformin,2019-12-01,180,patient@example.com,Unknown,130,85,<30,Yes,No,No
+mary clark,25,male,heart disease,albuterol,2019-03-25,220,name@hospital.org,123-456-7890,140,90,<30,No,No,No
+james taylor,25,female,Unknown,metformin,2019-12-01,220,name@hospital.org,123-456-7890,140,90,<30,No,No,No
+john doe,25,female,hypertension,metformin,2019-12-01,180,Unknown,098-765-4321,130,85,<30,No,Yes,Yes
+james taylor,40,male,heart disease,atorvastatin,2020-01-15,200,Unknown,123-456-7890,140,90,30-44,No,No,No
+david lee,70,male,diabetes,lisinopril,2019-03-25,180,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+james taylor,70,female,heart disease,albuterol,2020-02-20,200,Unknown,Unknown,130,85,60-74,No,No,No
+laura martinez,40,male,heart disease,albuterol,2020-01-15,180,contact@domain.com,123-456-7890,110,70,30-44,No,No,No
+john doe,60,male,heart disease,lisinopril,2018-04-05,180,contact@domain.com,Unknown,120,80,60-74,No,Yes,Yes
+laura martinez,25,female,heart disease,metformin,2019-03-25,200,Unknown,Unknown,130,85,<30,Yes,Yes,Yes
+laura martinez,25,male,hypertension,atorvastatin,2019-03-25,160,patient@example.com,Unknown,130,85,<30,No,No,No
+robert brown,60,other,asthma,atorvastatin,2018-04-05,220,Unknown,123-456-7890,120,80,60-74,No,Yes,Yes
+john doe,70,other,Unknown,albuterol,2018-04-05,220,Unknown,555-555-5555,120,80,60-74,No,No,No
+laura martinez,35,other,heart disease,atorvastatin,2018-04-05,220,patient@example.com,Unknown,130,85,30-44,No,No,No
+robert brown,35,other,heart disease,lisinopril,2020-02-20,200,name@hospital.org,098-765-4321,120,80,30-44,No,No,No
+robert brown,35,female,heart disease,metformin,2019-12-01,220,name@hospital.org,123-456-7890,130,85,30-44,No,No,No
+john doe,70,female,asthma,lisinopril,2019-03-25,220,contact@domain.com,098-765-4321,120,80,60-74,No,Yes,Yes
+michael wilson,70,female,diabetes,none,2019-12-01,200,Unknown,555-555-5555,120,80,60-74,Yes,No,No
+mary clark,60,other,diabetes,albuterol,2019-12-01,180,contact@domain.com,098-765-4321,120,80,60-74,No,Yes,Yes
+david lee,25,other,hypertension,atorvastatin,2018-04-05,220,name@hospital.org,123-456-7890,130,85,<30,No,No,No
+mary clark,60,male,diabetes,none,2020-02-20,160,patient@example.com,123-456-7890,120,80,60-74,No,Yes,Yes
+james taylor,60,male,heart disease,atorvastatin,2020-01-15,220,contact@domain.com,555-555-5555,120,80,60-74,No,No,No
+david lee,70,other,heart disease,metformin,2020-02-20,200,Unknown,123-456-7890,120,80,60-74,No,No,No
+james taylor,35,other,heart disease,metformin,2019-12-01,200,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+laura martinez,40,other,hypertension,metformin,2020-02-20,200,patient@example.com,555-555-5555,140,90,30-44,No,No,No
+jane smith,25,other,heart disease,atorvastatin,2018-04-05,220,name@hospital.org,123-456-7890,130,85,<30,No,No,No
+john doe,70,male,diabetes,none,2020-01-15,200,Unknown,Unknown,130,85,60-74,Yes,No,No
+david lee,35,other,asthma,metformin,2018-04-05,160,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+david lee,40,male,asthma,none,2020-01-15,220,Unknown,123-456-7890,140,90,30-44,No,No,No
+laura martinez,40,other,Unknown,atorvastatin,2019-12-01,180,contact@domain.com,Unknown,120,80,30-44,Yes,No,No
+michael wilson,70,other,diabetes,none,2020-01-15,180,name@hospital.org,555-555-5555,110,70,60-74,Yes,No,No
+robert brown,40,other,heart disease,atorvastatin,2020-01-15,220,contact@domain.com,Unknown,110,70,30-44,No,No,No
+laura martinez,25,male,asthma,atorvastatin,2020-01-15,220,name@hospital.org,Unknown,120,80,<30,No,Yes,Yes
+sarah johnson,40,male,diabetes,albuterol,2020-02-20,180,Unknown,Unknown,140,90,30-44,Yes,No,No
+robert brown,70,female,asthma,atorvastatin,2020-02-20,200,Unknown,Unknown,140,90,60-74,Yes,No,No
+john doe,70,other,heart disease,atorvastatin,2019-12-01,180,contact@domain.com,555-555-5555,130,85,60-74,Yes,No,No
+robert brown,35,female,asthma,lisinopril,2020-01-15,220,Unknown,123-456-7890,120,80,30-44,No,No,No
+robert brown,25,male,Unknown,albuterol,2019-12-01,200,contact@domain.com,123-456-7890,110,70,<30,No,No,No
+john doe,60,male,asthma,albuterol,2020-01-15,220,contact@domain.com,098-765-4321,120,80,60-74,No,No,No
+michael wilson,35,female,diabetes,albuterol,2020-01-15,200,Unknown,098-765-4321,120,80,30-44,No,No,No
+mary clark,40,other,diabetes,lisinopril,2020-02-20,180,contact@domain.com,555-555-5555,130,85,30-44,No,Yes,Yes
+david lee,40,male,diabetes,atorvastatin,2019-12-01,220,Unknown,Unknown,140,90,30-44,No,No,No
+david lee,35,other,asthma,metformin,2020-01-15,180,Unknown,123-456-7890,130,85,30-44,No,Yes,Yes
+james taylor,70,other,diabetes,none,2020-01-15,180,Unknown,Unknown,140,90,60-74,Yes,No,No
+mary clark,40,female,heart disease,atorvastatin,2019-12-01,200,name@hospital.org,Unknown,130,85,30-44,Yes,No,No
+robert brown,25,female,heart disease,atorvastatin,2019-12-01,200,Unknown,555-555-5555,130,85,<30,Yes,Yes,Yes
+david lee,40,female,diabetes,atorvastatin,2019-12-01,180,patient@example.com,Unknown,110,70,30-44,No,No,No
+john doe,40,male,heart disease,lisinopril,2019-03-25,180,patient@example.com,123-456-7890,130,85,30-44,Yes,Yes,Yes
+emily davis,60,male,diabetes,albuterol,2019-12-01,220,contact@domain.com,Unknown,140,90,60-74,No,No,No
+emily davis,25,female,asthma,albuterol,2020-01-15,200,contact@domain.com,123-456-7890,110,70,<30,Yes,No,No
+michael wilson,25,male,heart disease,metformin,2019-12-01,160,patient@example.com,098-765-4321,120,80,<30,No,Yes,Yes
+david lee,35,female,asthma,metformin,2019-03-25,200,Unknown,555-555-5555,130,85,30-44,Yes,Yes,Yes
+david lee,35,other,asthma,albuterol,2018-04-05,180,contact@domain.com,123-456-7890,130,85,30-44,No,No,No
+emily davis,60,other,hypertension,none,2019-12-01,180,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+david lee,70,other,diabetes,atorvastatin,2020-02-20,180,Unknown,Unknown,120,80,60-74,Yes,No,No
+robert brown,25,female,Unknown,none,2020-01-15,180,Unknown,555-555-5555,110,70,<30,No,No,No
+sarah johnson,60,other,diabetes,atorvastatin,2020-01-15,180,contact@domain.com,Unknown,120,80,60-74,No,No,No
+jane smith,35,male,Unknown,albuterol,2020-02-20,160,Unknown,Unknown,110,70,30-44,No,No,No
+mary clark,35,other,diabetes,metformin,2020-02-20,220,contact@domain.com,123-456-7890,130,85,30-44,No,No,No
+james taylor,25,other,asthma,metformin,2019-12-01,160,contact@domain.com,Unknown,130,85,<30,No,Yes,Yes
+michael wilson,40,other,heart disease,none,2020-02-20,200,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+sarah johnson,40,male,heart disease,metformin,2018-04-05,160,patient@example.com,123-456-7890,130,85,30-44,No,Yes,Yes
+emily davis,35,female,hypertension,albuterol,2019-03-25,200,Unknown,098-765-4321,110,70,30-44,Yes,No,No
+mary clark,70,male,Unknown,none,2020-02-20,220,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+david lee,70,female,Unknown,atorvastatin,2020-02-20,200,name@hospital.org,Unknown,120,80,60-74,Yes,No,No
+james taylor,35,female,Unknown,metformin,2018-04-05,200,Unknown,123-456-7890,130,85,30-44,No,Yes,Yes
+david lee,40,other,asthma,lisinopril,2020-01-15,220,contact@domain.com,Unknown,130,85,30-44,No,No,No
+john doe,40,female,Unknown,metformin,2020-01-15,180,contact@domain.com,Unknown,120,80,30-44,No,No,No
+john doe,60,male,heart disease,atorvastatin,2019-12-01,160,Unknown,555-555-5555,120,80,60-74,No,Yes,Yes
+james taylor,70,male,asthma,none,2018-04-05,200,name@hospital.org,Unknown,120,80,60-74,Yes,Yes,Yes
+james taylor,60,female,diabetes,atorvastatin,2019-03-25,200,Unknown,098-765-4321,140,90,60-74,No,No,No
+emily davis,70,other,Unknown,lisinopril,2019-03-25,180,name@hospital.org,Unknown,110,70,60-74,No,No,No
+james taylor,40,other,Unknown,albuterol,2018-04-05,160,name@hospital.org,Unknown,120,80,30-44,No,No,No
+robert brown,40,male,diabetes,metformin,2019-03-25,180,Unknown,Unknown,140,90,30-44,No,No,No
+david lee,25,other,Unknown,none,2020-01-15,160,contact@domain.com,123-456-7890,130,85,<30,No,No,No
+sarah johnson,60,female,diabetes,albuterol,2019-03-25,220,contact@domain.com,Unknown,110,70,60-74,No,No,No
+laura martinez,35,female,asthma,atorvastatin,2019-03-25,180,name@hospital.org,Unknown,120,80,30-44,No,No,No
+james taylor,60,male,heart disease,none,2018-04-05,180,contact@domain.com,123-456-7890,120,80,60-74,No,Yes,Yes
+michael wilson,35,female,diabetes,albuterol,2018-04-05,180,patient@example.com,555-555-5555,120,80,30-44,No,No,No
+john doe,40,male,hypertension,none,2019-03-25,220,name@hospital.org,123-456-7890,130,85,30-44,No,Yes,Yes
+robert brown,60,female,diabetes,lisinopril,2020-02-20,200,contact@domain.com,098-765-4321,110,70,60-74,No,No,No
+laura martinez,40,other,asthma,metformin,2019-12-01,180,Unknown,555-555-5555,130,85,30-44,No,No,No
+sarah johnson,40,female,asthma,metformin,2019-12-01,220,contact@domain.com,Unknown,130,85,30-44,No,Yes,Yes
+laura martinez,25,female,diabetes,lisinopril,2020-01-15,200,patient@example.com,123-456-7890,130,85,<30,No,No,No
+james taylor,60,male,heart disease,none,2019-03-25,160,Unknown,123-456-7890,110,70,60-74,No,No,No
+emily davis,40,male,hypertension,lisinopril,2020-02-20,220,Unknown,123-456-7890,110,70,30-44,No,No,No
+john doe,35,female,asthma,metformin,2020-01-15,160,patient@example.com,123-456-7890,120,80,30-44,No,No,No
+john doe,40,male,Unknown,lisinopril,2019-03-25,180,name@hospital.org,555-555-5555,130,85,30-44,No,No,No
+mary clark,40,female,Unknown,lisinopril,2018-04-05,200,name@hospital.org,Unknown,130,85,30-44,No,No,No
+emily davis,35,other,heart disease,none,2019-12-01,220,contact@domain.com,Unknown,140,90,30-44,No,No,No
+david lee,40,male,asthma,albuterol,2020-02-20,200,Unknown,123-456-7890,140,90,30-44,No,No,No
+jane smith,40,female,diabetes,metformin,2019-12-01,180,name@hospital.org,555-555-5555,140,90,30-44,No,No,No
+robert brown,60,other,Unknown,none,2018-04-05,200,name@hospital.org,555-555-5555,120,80,60-74,No,Yes,Yes
+john doe,60,other,heart disease,lisinopril,2019-03-25,200,Unknown,123-456-7890,140,90,60-74,No,No,No
+michael wilson,70,female,asthma,lisinopril,2018-04-05,200,Unknown,098-765-4321,130,85,60-74,Yes,No,No
+john doe,70,male,asthma,albuterol,2018-04-05,200,name@hospital.org,123-456-7890,120,80,60-74,No,Yes,Yes
+laura martinez,25,female,asthma,metformin,2019-12-01,160,patient@example.com,098-765-4321,110,70,<30,No,No,No
+john doe,40,other,asthma,metformin,2020-02-20,220,contact@domain.com,123-456-7890,120,80,30-44,No,No,No
+john doe,60,female,asthma,atorvastatin,2018-04-05,200,name@hospital.org,098-765-4321,140,90,60-74,Yes,No,No
+jane smith,40,male,Unknown,metformin,2019-12-01,220,name@hospital.org,098-765-4321,110,70,30-44,No,No,No
+jane smith,35,other,heart disease,albuterol,2020-02-20,220,Unknown,123-456-7890,130,85,30-44,No,No,No
+sarah johnson,40,female,asthma,atorvastatin,2019-03-25,180,patient@example.com,098-765-4321,120,80,30-44,No,No,No
+david lee,40,male,hypertension,atorvastatin,2019-03-25,180,contact@domain.com,Unknown,110,70,30-44,No,No,No
+michael wilson,70,other,hypertension,lisinopril,2020-01-15,180,name@hospital.org,Unknown,120,80,60-74,Yes,No,No
+john doe,40,male,heart disease,lisinopril,2019-12-01,180,contact@domain.com,555-555-5555,140,90,30-44,No,No,No
+john doe,25,other,diabetes,metformin,2020-02-20,180,Unknown,098-765-4321,130,85,<30,No,No,No
+robert brown,40,female,diabetes,atorvastatin,2018-04-05,180,name@hospital.org,098-765-4321,120,80,30-44,No,No,No
+jane smith,70,male,diabetes,lisinopril,2019-03-25,220,name@hospital.org,555-555-5555,110,70,60-74,No,No,No
+michael wilson,35,other,hypertension,albuterol,2020-02-20,180,Unknown,098-765-4321,140,90,30-44,Yes,No,No
+mary clark,70,male,diabetes,lisinopril,2019-12-01,220,Unknown,555-555-5555,140,90,60-74,No,No,No
+sarah johnson,25,male,Unknown,lisinopril,2020-01-15,160,name@hospital.org,123-456-7890,110,70,<30,No,No,No
+david lee,40,female,asthma,atorvastatin,2019-03-25,220,contact@domain.com,Unknown,110,70,30-44,No,No,No
+emily davis,35,male,hypertension,atorvastatin,2020-02-20,160,patient@example.com,Unknown,120,80,30-44,No,No,No
+david lee,25,other,heart disease,none,2020-02-20,200,contact@domain.com,Unknown,130,85,<30,No,Yes,Yes
+laura martinez,70,other,heart disease,albuterol,2020-02-20,200,Unknown,098-765-4321,140,90,60-74,No,No,No
+john doe,25,other,asthma,atorvastatin,2019-12-01,160,patient@example.com,Unknown,120,80,<30,No,No,No
+sarah johnson,40,other,hypertension,metformin,2019-12-01,160,contact@domain.com,123-456-7890,110,70,30-44,No,No,No
+laura martinez,60,female,diabetes,albuterol,2019-12-01,220,contact@domain.com,Unknown,120,80,60-74,No,No,No
+michael wilson,25,male,diabetes,albuterol,2018-04-05,160,Unknown,123-456-7890,110,70,<30,No,No,No
+emily davis,25,female,Unknown,atorvastatin,2020-02-20,200,Unknown,123-456-7890,130,85,<30,Yes,No,No
+jane smith,70,male,Unknown,albuterol,2019-03-25,200,Unknown,098-765-4321,110,70,60-74,No,No,No
+sarah johnson,70,male,diabetes,atorvastatin,2019-12-01,200,patient@example.com,123-456-7890,110,70,60-74,No,No,No
+sarah johnson,35,male,heart disease,lisinopril,2019-12-01,160,Unknown,Unknown,110,70,30-44,No,No,No
+john doe,70,female,heart disease,none,2020-02-20,180,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+james taylor,40,male,Unknown,lisinopril,2019-12-01,180,name@hospital.org,Unknown,110,70,30-44,No,No,No
+sarah johnson,40,female,asthma,atorvastatin,2018-04-05,160,name@hospital.org,098-765-4321,140,90,30-44,No,No,No
+robert brown,40,other,diabetes,atorvastatin,2018-04-05,180,patient@example.com,Unknown,140,90,30-44,Yes,No,No
+emily davis,60,other,Unknown,lisinopril,2019-12-01,180,name@hospital.org,555-555-5555,120,80,60-74,No,No,No
+emily davis,60,male,Unknown,metformin,2020-02-20,160,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+robert brown,40,female,diabetes,metformin,2020-02-20,200,patient@example.com,555-555-5555,120,80,30-44,Yes,No,No
+mary clark,60,other,diabetes,metformin,2020-02-20,180,Unknown,555-555-5555,140,90,60-74,Yes,No,No
+robert brown,35,female,heart disease,atorvastatin,2020-01-15,220,patient@example.com,098-765-4321,140,90,30-44,No,No,No
+robert brown,70,female,asthma,albuterol,2019-12-01,200,patient@example.com,123-456-7890,130,85,60-74,Yes,No,No
+emily davis,40,male,asthma,atorvastatin,2020-02-20,180,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+david lee,60,other,diabetes,albuterol,2018-04-05,180,contact@domain.com,Unknown,140,90,60-74,No,No,No
+emily davis,40,male,hypertension,lisinopril,2019-03-25,160,patient@example.com,123-456-7890,120,80,30-44,No,No,No
+james taylor,40,male,Unknown,none,2019-03-25,160,name@hospital.org,Unknown,120,80,30-44,No,No,No
+john doe,25,other,Unknown,albuterol,2020-02-20,180,contact@domain.com,Unknown,110,70,<30,Yes,No,No
+laura martinez,70,other,diabetes,metformin,2019-03-25,200,Unknown,123-456-7890,110,70,60-74,No,No,No
+david lee,40,female,hypertension,atorvastatin,2019-03-25,220,Unknown,123-456-7890,130,85,30-44,No,No,No
+jane smith,25,other,heart disease,lisinopril,2020-01-15,200,contact@domain.com,Unknown,130,85,<30,No,Yes,Yes
+laura martinez,60,female,diabetes,metformin,2018-04-05,200,patient@example.com,098-765-4321,120,80,60-74,Yes,No,No
+john doe,25,female,diabetes,lisinopril,2018-04-05,200,name@hospital.org,Unknown,110,70,<30,Yes,No,No
+james taylor,70,female,Unknown,none,2020-01-15,200,Unknown,Unknown,120,80,60-74,No,No,No
+james taylor,40,other,diabetes,atorvastatin,2020-01-15,220,contact@domain.com,098-765-4321,110,70,30-44,No,No,No
+jane smith,40,male,diabetes,atorvastatin,2019-03-25,200,name@hospital.org,123-456-7890,140,90,30-44,No,No,No
+david lee,60,female,diabetes,none,2019-12-01,160,name@hospital.org,Unknown,120,80,60-74,No,No,No
+mary clark,40,male,Unknown,atorvastatin,2019-03-25,180,name@hospital.org,Unknown,140,90,30-44,No,No,No
+robert brown,70,male,heart disease,albuterol,2020-01-15,160,patient@example.com,Unknown,120,80,60-74,No,No,No
+david lee,60,other,heart disease,lisinopril,2018-04-05,180,Unknown,098-765-4321,120,80,60-74,No,Yes,Yes
+mary clark,35,male,diabetes,metformin,2019-03-25,180,name@hospital.org,Unknown,130,85,30-44,Yes,No,No
+james taylor,25,male,Unknown,none,2019-12-01,220,Unknown,098-765-4321,140,90,<30,No,No,No
+emily davis,70,other,heart disease,albuterol,2019-03-25,200,contact@domain.com,123-456-7890,110,70,60-74,No,No,No
+john doe,35,female,heart disease,metformin,2020-02-20,220,Unknown,098-765-4321,130,85,30-44,No,Yes,Yes
+jane smith,40,male,heart disease,metformin,2019-03-25,200,patient@example.com,098-765-4321,120,80,30-44,No,No,No
+john doe,40,other,Unknown,none,2020-01-15,160,patient@example.com,Unknown,140,90,30-44,No,No,No
+michael wilson,60,male,Unknown,albuterol,2018-04-05,160,Unknown,Unknown,120,80,60-74,No,No,No
+michael wilson,25,male,diabetes,metformin,2018-04-05,200,Unknown,Unknown,120,80,<30,No,No,No
+david lee,60,female,asthma,metformin,2020-01-15,220,patient@example.com,555-555-5555,120,80,60-74,No,No,No
+james taylor,40,male,heart disease,albuterol,2020-02-20,200,patient@example.com,098-765-4321,130,85,30-44,No,No,No
+james taylor,60,other,asthma,atorvastatin,2020-01-15,180,Unknown,555-555-5555,130,85,60-74,Yes,No,No
+robert brown,25,male,Unknown,metformin,2019-03-25,160,patient@example.com,Unknown,110,70,<30,No,No,No
+robert brown,40,female,Unknown,lisinopril,2020-01-15,200,Unknown,Unknown,140,90,30-44,Yes,No,No
+robert brown,60,female,Unknown,albuterol,2020-01-15,160,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+emily davis,40,other,asthma,metformin,2020-02-20,160,Unknown,Unknown,130,85,30-44,No,Yes,Yes
+laura martinez,70,female,Unknown,none,2019-03-25,180,contact@domain.com,Unknown,120,80,60-74,No,Yes,Yes
+sarah johnson,40,male,diabetes,lisinopril,2019-12-01,180,Unknown,123-456-7890,120,80,30-44,Yes,No,No
+laura martinez,70,female,Unknown,metformin,2019-12-01,200,Unknown,098-765-4321,130,85,60-74,Yes,No,No
+john doe,40,other,hypertension,lisinopril,2018-04-05,180,contact@domain.com,Unknown,140,90,30-44,No,No,No
+laura martinez,40,female,asthma,lisinopril,2020-01-15,220,name@hospital.org,Unknown,120,80,30-44,No,No,No
+emily davis,70,female,hypertension,atorvastatin,2018-04-05,200,patient@example.com,Unknown,130,85,60-74,Yes,No,No
+john doe,35,female,Unknown,lisinopril,2020-02-20,200,Unknown,Unknown,130,85,30-44,No,No,No
+laura martinez,25,other,diabetes,atorvastatin,2019-12-01,180,patient@example.com,Unknown,140,90,<30,No,No,No
+emily davis,35,female,heart disease,albuterol,2020-01-15,200,Unknown,555-555-5555,140,90,30-44,Yes,No,No
+sarah johnson,60,female,Unknown,atorvastatin,2020-02-20,220,patient@example.com,098-765-4321,140,90,60-74,No,No,No
+laura martinez,40,male,diabetes,none,2020-02-20,180,contact@domain.com,098-765-4321,120,80,30-44,Yes,No,No
+emily davis,35,other,asthma,metformin,2020-01-15,160,patient@example.com,123-456-7890,110,70,30-44,No,No,No
+robert brown,40,female,hypertension,albuterol,2020-02-20,200,patient@example.com,123-456-7890,140,90,30-44,No,No,No
+james taylor,60,other,hypertension,albuterol,2020-01-15,180,patient@example.com,123-456-7890,110,70,60-74,No,No,No
+robert brown,60,female,hypertension,none,2020-01-15,160,name@hospital.org,098-765-4321,120,80,60-74,No,No,No
+james taylor,35,female,asthma,atorvastatin,2019-03-25,220,name@hospital.org,555-555-5555,110,70,30-44,No,No,No
+jane smith,35,female,diabetes,metformin,2018-04-05,160,Unknown,098-765-4321,130,85,30-44,No,Yes,Yes
+jane smith,40,male,asthma,atorvastatin,2020-02-20,160,contact@domain.com,098-765-4321,110,70,30-44,No,No,No
+jane smith,25,male,hypertension,lisinopril,2020-02-20,220,patient@example.com,098-765-4321,140,90,<30,No,No,No
+sarah johnson,35,male,Unknown,atorvastatin,2019-03-25,160,patient@example.com,098-765-4321,120,80,30-44,No,No,No
+robert brown,35,other,heart disease,albuterol,2019-03-25,180,patient@example.com,555-555-5555,140,90,30-44,No,No,No
+james taylor,70,other,asthma,metformin,2019-03-25,180,patient@example.com,123-456-7890,120,80,60-74,Yes,Yes,Yes
+emily davis,40,male,asthma,atorvastatin,2019-12-01,160,name@hospital.org,Unknown,140,90,30-44,No,No,No
+john doe,70,other,diabetes,metformin,2019-12-01,180,Unknown,123-456-7890,140,90,60-74,No,No,No
+emily davis,70,female,diabetes,metformin,2019-12-01,200,Unknown,123-456-7890,140,90,60-74,Yes,No,No
+john doe,60,female,asthma,lisinopril,2020-01-15,200,contact@domain.com,Unknown,130,85,60-74,Yes,No,No
+michael wilson,25,female,hypertension,lisinopril,2020-02-20,160,patient@example.com,098-765-4321,130,85,<30,No,Yes,Yes
+emily davis,40,male,heart disease,albuterol,2018-04-05,180,Unknown,555-555-5555,140,90,30-44,No,No,No
+laura martinez,40,other,diabetes,none,2020-01-15,160,Unknown,555-555-5555,140,90,30-44,No,No,No
+laura martinez,40,male,hypertension,metformin,2020-02-20,220,Unknown,123-456-7890,140,90,30-44,No,No,No
+david lee,35,other,Unknown,none,2020-02-20,180,name@hospital.org,Unknown,120,80,30-44,Yes,No,No
+robert brown,35,female,diabetes,albuterol,2019-03-25,160,Unknown,Unknown,130,85,30-44,No,No,No
+john doe,40,male,hypertension,metformin,2019-03-25,180,Unknown,098-765-4321,120,80,30-44,Yes,No,No
+john doe,35,other,hypertension,metformin,2020-01-15,180,name@hospital.org,123-456-7890,130,85,30-44,No,No,No
+robert brown,25,other,heart disease,none,2019-03-25,200,Unknown,555-555-5555,140,90,<30,No,No,No
+sarah johnson,70,female,heart disease,atorvastatin,2020-02-20,160,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+david lee,35,male,Unknown,lisinopril,2019-03-25,160,Unknown,Unknown,110,70,30-44,No,No,No
+sarah johnson,60,male,hypertension,atorvastatin,2019-12-01,200,name@hospital.org,123-456-7890,110,70,60-74,Yes,No,No
+sarah johnson,35,male,hypertension,none,2019-03-25,180,patient@example.com,Unknown,140,90,30-44,No,No,No
+sarah johnson,40,female,heart disease,lisinopril,2020-02-20,220,contact@domain.com,555-555-5555,120,80,30-44,No,No,No
+robert brown,25,male,diabetes,atorvastatin,2020-01-15,180,Unknown,123-456-7890,120,80,<30,No,Yes,Yes
+sarah johnson,40,female,diabetes,lisinopril,2018-04-05,160,name@hospital.org,Unknown,130,85,30-44,No,No,No
+laura martinez,40,female,asthma,metformin,2019-03-25,220,Unknown,Unknown,140,90,30-44,No,No,No
+jane smith,60,female,heart disease,atorvastatin,2020-02-20,180,name@hospital.org,098-765-4321,120,80,60-74,No,Yes,Yes
+michael wilson,25,other,asthma,lisinopril,2018-04-05,200,contact@domain.com,555-555-5555,130,85,<30,No,Yes,Yes
+john doe,25,male,heart disease,lisinopril,2018-04-05,200,contact@domain.com,555-555-5555,130,85,<30,Yes,No,No
+john doe,25,male,Unknown,lisinopril,2019-12-01,180,patient@example.com,Unknown,120,80,<30,No,Yes,Yes
+michael wilson,25,female,hypertension,atorvastatin,2018-04-05,180,patient@example.com,123-456-7890,120,80,<30,No,No,No
+robert brown,25,female,Unknown,albuterol,2020-02-20,200,contact@domain.com,Unknown,120,80,<30,No,No,No
+emily davis,60,male,heart disease,atorvastatin,2020-02-20,160,Unknown,Unknown,120,80,60-74,No,No,No
+robert brown,35,female,hypertension,none,2019-03-25,200,Unknown,098-765-4321,130,85,30-44,Yes,Yes,Yes
+john doe,40,male,diabetes,atorvastatin,2019-03-25,180,Unknown,098-765-4321,120,80,30-44,No,No,No
+john doe,25,other,diabetes,lisinopril,2019-03-25,220,patient@example.com,098-765-4321,130,85,<30,No,No,No
+michael wilson,35,female,asthma,metformin,2018-04-05,180,Unknown,Unknown,130,85,30-44,No,Yes,Yes
+sarah johnson,35,male,heart disease,atorvastatin,2018-04-05,180,patient@example.com,Unknown,110,70,30-44,Yes,No,No
+robert brown,40,female,heart disease,atorvastatin,2019-12-01,180,contact@domain.com,555-555-5555,130,85,30-44,No,Yes,Yes
+james taylor,60,male,diabetes,lisinopril,2019-03-25,200,Unknown,123-456-7890,130,85,60-74,No,No,No
+michael wilson,40,male,Unknown,metformin,2020-01-15,180,Unknown,555-555-5555,110,70,30-44,No,No,No
+laura martinez,40,female,hypertension,metformin,2019-12-01,180,contact@domain.com,Unknown,130,85,30-44,No,Yes,Yes
+john doe,35,other,Unknown,none,2020-01-15,220,Unknown,555-555-5555,120,80,30-44,No,No,No
+michael wilson,70,male,Unknown,atorvastatin,2018-04-05,200,Unknown,Unknown,140,90,60-74,No,No,No
+robert brown,70,male,diabetes,metformin,2019-12-01,200,name@hospital.org,098-765-4321,140,90,60-74,No,No,No
+john doe,40,male,diabetes,metformin,2019-12-01,180,patient@example.com,Unknown,120,80,30-44,No,No,No
+emily davis,40,other,diabetes,albuterol,2020-02-20,220,Unknown,Unknown,140,90,30-44,No,No,No
+michael wilson,35,other,asthma,albuterol,2018-04-05,180,contact@domain.com,555-555-5555,140,90,30-44,No,No,No
+david lee,60,female,Unknown,metformin,2018-04-05,180,Unknown,Unknown,120,80,60-74,No,No,No
+john doe,40,other,heart disease,none,2019-12-01,180,Unknown,555-555-5555,120,80,30-44,Yes,No,No
+robert brown,35,female,hypertension,metformin,2018-04-05,200,patient@example.com,555-555-5555,130,85,30-44,Yes,Yes,Yes
+jane smith,35,female,asthma,lisinopril,2019-12-01,220,name@hospital.org,Unknown,130,85,30-44,No,Yes,Yes
+james taylor,25,other,heart disease,atorvastatin,2020-02-20,160,patient@example.com,555-555-5555,120,80,<30,No,No,No
+mary clark,60,female,Unknown,none,2019-12-01,200,Unknown,098-765-4321,130,85,60-74,Yes,No,No
+sarah johnson,25,other,diabetes,lisinopril,2018-04-05,160,Unknown,555-555-5555,140,90,<30,No,No,No
+mary clark,40,female,Unknown,none,2018-04-05,200,Unknown,098-765-4321,130,85,30-44,No,Yes,Yes
+robert brown,25,other,hypertension,lisinopril,2019-12-01,180,Unknown,Unknown,140,90,<30,Yes,No,No
+laura martinez,25,other,asthma,atorvastatin,2019-12-01,180,contact@domain.com,Unknown,110,70,<30,Yes,No,No
+laura martinez,40,female,asthma,atorvastatin,2019-12-01,220,name@hospital.org,098-765-4321,120,80,30-44,No,No,No
+jane smith,70,male,hypertension,albuterol,2019-03-25,160,Unknown,Unknown,130,85,60-74,No,No,No
+sarah johnson,35,female,heart disease,lisinopril,2018-04-05,200,Unknown,Unknown,110,70,30-44,Yes,No,No
+david lee,60,other,heart disease,albuterol,2018-04-05,180,Unknown,098-765-4321,110,70,60-74,Yes,No,No
+jane smith,25,male,asthma,lisinopril,2019-03-25,220,name@hospital.org,Unknown,110,70,<30,No,No,No
+mary clark,60,female,asthma,albuterol,2019-12-01,220,patient@example.com,123-456-7890,120,80,60-74,No,No,No
+jane smith,70,female,diabetes,atorvastatin,2020-02-20,160,name@hospital.org,Unknown,120,80,60-74,No,Yes,Yes
+mary clark,70,female,heart disease,none,2019-12-01,200,name@hospital.org,Unknown,120,80,60-74,No,No,No
+john doe,25,male,hypertension,albuterol,2019-12-01,200,name@hospital.org,Unknown,120,80,<30,No,Yes,Yes
+laura martinez,40,other,heart disease,lisinopril,2019-03-25,180,Unknown,Unknown,110,70,30-44,No,No,No
+john doe,25,female,diabetes,lisinopril,2018-04-05,200,Unknown,555-555-5555,110,70,<30,Yes,No,No
+james taylor,40,female,asthma,atorvastatin,2019-12-01,160,contact@domain.com,Unknown,130,85,30-44,No,No,No
+sarah johnson,35,female,asthma,lisinopril,2018-04-05,200,patient@example.com,Unknown,130,85,30-44,Yes,Yes,Yes
+david lee,40,female,diabetes,metformin,2020-01-15,160,Unknown,098-765-4321,110,70,30-44,No,No,No
+mary clark,25,female,hypertension,none,2018-04-05,160,name@hospital.org,123-456-7890,140,90,<30,No,No,No
+david lee,60,other,asthma,albuterol,2020-02-20,160,patient@example.com,555-555-5555,130,85,60-74,No,No,No
+mary clark,40,other,Unknown,none,2020-02-20,180,patient@example.com,098-765-4321,120,80,30-44,Yes,No,No
+robert brown,40,female,asthma,atorvastatin,2019-12-01,220,contact@domain.com,123-456-7890,130,85,30-44,No,No,No
+jane smith,25,male,Unknown,albuterol,2018-04-05,200,Unknown,123-456-7890,140,90,<30,Yes,No,No
+james taylor,40,other,diabetes,albuterol,2019-12-01,160,name@hospital.org,123-456-7890,130,85,30-44,No,Yes,Yes
+laura martinez,60,male,diabetes,metformin,2019-03-25,180,Unknown,098-765-4321,120,80,60-74,No,No,No
+mary clark,70,other,asthma,atorvastatin,2020-02-20,200,contact@domain.com,555-555-5555,120,80,60-74,No,No,No
+david lee,40,female,heart disease,lisinopril,2019-12-01,160,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+james taylor,70,other,Unknown,metformin,2019-03-25,180,patient@example.com,123-456-7890,130,85,60-74,No,No,No
+emily davis,60,female,hypertension,metformin,2019-12-01,220,name@hospital.org,098-765-4321,110,70,60-74,No,No,No
+emily davis,25,other,asthma,none,2018-04-05,160,Unknown,123-456-7890,130,85,<30,No,No,No
+john doe,35,female,hypertension,none,2018-04-05,180,contact@domain.com,Unknown,140,90,30-44,No,No,No
+laura martinez,40,female,asthma,none,2018-04-05,160,Unknown,555-555-5555,110,70,30-44,No,No,No
+robert brown,35,female,heart disease,metformin,2018-04-05,200,patient@example.com,Unknown,130,85,30-44,Yes,No,No
+david lee,60,female,heart disease,lisinopril,2020-01-15,180,name@hospital.org,123-456-7890,120,80,60-74,No,Yes,Yes
+jane smith,40,male,heart disease,albuterol,2019-03-25,180,Unknown,Unknown,140,90,30-44,Yes,No,No
+jane smith,70,female,heart disease,none,2019-03-25,200,Unknown,555-555-5555,140,90,60-74,Yes,No,No
+david lee,40,male,diabetes,lisinopril,2018-04-05,180,patient@example.com,098-765-4321,140,90,30-44,No,No,No
+sarah johnson,35,male,diabetes,atorvastatin,2020-01-15,200,Unknown,555-555-5555,110,70,30-44,No,No,No
+robert brown,40,female,Unknown,none,2018-04-05,180,contact@domain.com,098-765-4321,120,80,30-44,No,No,No
+james taylor,35,male,hypertension,albuterol,2020-01-15,200,Unknown,098-765-4321,110,70,30-44,No,No,No
+mary clark,40,other,asthma,atorvastatin,2018-04-05,160,Unknown,123-456-7890,130,85,30-44,No,No,No
+sarah johnson,25,female,asthma,atorvastatin,2020-02-20,160,Unknown,123-456-7890,120,80,<30,No,No,No
+mary clark,70,male,diabetes,albuterol,2020-02-20,180,patient@example.com,555-555-5555,130,85,60-74,No,No,No
+mary clark,35,female,asthma,none,2019-12-01,160,patient@example.com,Unknown,120,80,30-44,No,No,No
+sarah johnson,40,female,diabetes,metformin,2018-04-05,220,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+emily davis,60,male,hypertension,albuterol,2019-12-01,200,patient@example.com,098-765-4321,120,80,60-74,Yes,Yes,Yes
+mary clark,40,other,Unknown,albuterol,2020-02-20,200,contact@domain.com,098-765-4321,140,90,30-44,No,No,No
+sarah johnson,35,other,heart disease,atorvastatin,2018-04-05,160,contact@domain.com,123-456-7890,110,70,30-44,No,No,No
+sarah johnson,60,male,heart disease,lisinopril,2019-12-01,200,Unknown,Unknown,120,80,60-74,No,No,No
+michael wilson,35,female,heart disease,metformin,2018-04-05,200,name@hospital.org,123-456-7890,140,90,30-44,Yes,No,No
+john doe,40,male,Unknown,none,2020-02-20,180,Unknown,Unknown,110,70,30-44,Yes,No,No
+laura martinez,40,male,asthma,none,2019-12-01,160,name@hospital.org,555-555-5555,130,85,30-44,No,No,No
+michael wilson,25,male,hypertension,lisinopril,2020-02-20,220,contact@domain.com,555-555-5555,120,80,<30,No,Yes,Yes
+michael wilson,40,female,heart disease,albuterol,2020-01-15,220,patient@example.com,Unknown,140,90,30-44,No,No,No
+david lee,60,male,heart disease,metformin,2020-02-20,160,Unknown,123-456-7890,120,80,60-74,No,No,No
+emily davis,70,female,heart disease,none,2018-04-05,160,contact@domain.com,123-456-7890,130,85,60-74,No,No,No
+sarah johnson,25,male,hypertension,none,2019-03-25,200,patient@example.com,Unknown,110,70,<30,No,No,No
+emily davis,60,other,heart disease,albuterol,2020-02-20,160,contact@domain.com,555-555-5555,120,80,60-74,No,Yes,Yes
+robert brown,40,male,hypertension,lisinopril,2019-03-25,220,Unknown,123-456-7890,120,80,30-44,No,No,No
+david lee,25,male,heart disease,metformin,2020-01-15,160,name@hospital.org,Unknown,110,70,<30,No,No,No
+laura martinez,60,other,Unknown,lisinopril,2019-12-01,200,contact@domain.com,555-555-5555,110,70,60-74,No,No,No
+emily davis,40,female,Unknown,lisinopril,2019-12-01,200,patient@example.com,Unknown,140,90,30-44,No,No,No
+jane smith,40,female,hypertension,metformin,2019-03-25,200,Unknown,Unknown,140,90,30-44,No,No,No
+mary clark,70,male,Unknown,metformin,2019-12-01,200,Unknown,098-765-4321,120,80,60-74,No,No,No
+robert brown,40,other,hypertension,none,2020-02-20,180,Unknown,Unknown,110,70,30-44,No,No,No
+john doe,35,female,Unknown,none,2019-03-25,160,name@hospital.org,Unknown,140,90,30-44,No,No,No
+robert brown,40,other,hypertension,atorvastatin,2020-02-20,160,Unknown,098-765-4321,130,85,30-44,No,Yes,Yes
+mary clark,70,female,asthma,none,2020-02-20,180,patient@example.com,Unknown,110,70,60-74,No,No,No
+david lee,35,female,Unknown,atorvastatin,2020-02-20,200,contact@domain.com,123-456-7890,140,90,30-44,No,No,No
+mary clark,60,other,heart disease,metformin,2018-04-05,180,name@hospital.org,098-765-4321,120,80,60-74,No,No,No
+michael wilson,60,other,asthma,none,2020-01-15,220,Unknown,555-555-5555,120,80,60-74,No,No,No
+mary clark,40,other,hypertension,lisinopril,2019-12-01,220,name@hospital.org,123-456-7890,120,80,30-44,No,No,No
+michael wilson,35,other,asthma,metformin,2019-03-25,160,Unknown,Unknown,130,85,30-44,No,Yes,Yes
+david lee,35,male,diabetes,albuterol,2020-01-15,160,name@hospital.org,Unknown,140,90,30-44,No,No,No
+james taylor,70,other,diabetes,atorvastatin,2019-03-25,180,Unknown,098-765-4321,140,90,60-74,Yes,No,No
+john doe,60,female,Unknown,metformin,2018-04-05,220,contact@domain.com,555-555-5555,120,80,60-74,No,No,No
+mary clark,70,male,heart disease,none,2020-02-20,200,name@hospital.org,Unknown,120,80,60-74,No,No,No
+mary clark,25,female,asthma,none,2020-02-20,180,patient@example.com,Unknown,110,70,<30,No,No,No
+john doe,60,female,diabetes,none,2018-04-05,200,name@hospital.org,123-456-7890,130,85,60-74,Yes,No,No
+jane smith,70,other,Unknown,albuterol,2020-01-15,180,Unknown,555-555-5555,140,90,60-74,Yes,No,No
+sarah johnson,60,female,asthma,none,2020-01-15,200,contact@domain.com,098-765-4321,140,90,60-74,No,No,No
+james taylor,40,male,Unknown,metformin,2019-03-25,200,contact@domain.com,123-456-7890,140,90,30-44,No,No,No
+laura martinez,25,other,Unknown,none,2018-04-05,160,contact@domain.com,098-765-4321,130,85,<30,No,No,No
+michael wilson,40,other,diabetes,lisinopril,2020-01-15,180,patient@example.com,Unknown,110,70,30-44,No,No,No
+john doe,25,male,diabetes,none,2018-04-05,200,patient@example.com,098-765-4321,130,85,<30,No,No,No
+david lee,40,other,Unknown,albuterol,2019-12-01,180,Unknown,555-555-5555,120,80,30-44,Yes,No,No
+michael wilson,70,other,hypertension,lisinopril,2020-02-20,180,name@hospital.org,Unknown,120,80,60-74,Yes,No,No
+sarah johnson,25,male,Unknown,metformin,2020-02-20,220,name@hospital.org,555-555-5555,140,90,<30,No,No,No
+robert brown,60,male,heart disease,atorvastatin,2018-04-05,160,contact@domain.com,123-456-7890,140,90,60-74,No,No,No
+mary clark,25,male,heart disease,lisinopril,2018-04-05,180,patient@example.com,Unknown,120,80,<30,No,Yes,Yes
+robert brown,70,female,heart disease,atorvastatin,2019-03-25,160,Unknown,Unknown,130,85,60-74,No,No,No
+michael wilson,25,female,hypertension,lisinopril,2020-02-20,200,Unknown,123-456-7890,120,80,<30,Yes,No,No
+sarah johnson,35,other,hypertension,lisinopril,2019-03-25,160,patient@example.com,123-456-7890,130,85,30-44,No,Yes,Yes
+james taylor,60,other,Unknown,albuterol,2020-02-20,180,name@hospital.org,555-555-5555,130,85,60-74,Yes,No,No
+michael wilson,70,male,heart disease,atorvastatin,2019-03-25,200,contact@domain.com,098-765-4321,120,80,60-74,Yes,No,No
+john doe,70,other,hypertension,albuterol,2019-03-25,180,name@hospital.org,555-555-5555,120,80,60-74,Yes,Yes,Yes
+emily davis,40,male,diabetes,lisinopril,2019-12-01,180,Unknown,098-765-4321,140,90,30-44,Yes,No,No
+mary clark,40,other,asthma,lisinopril,2018-04-05,220,Unknown,123-456-7890,140,90,30-44,No,No,No
+mary clark,70,male,Unknown,albuterol,2019-03-25,160,Unknown,Unknown,130,85,60-74,No,No,No
+michael wilson,60,female,asthma,atorvastatin,2020-02-20,220,name@hospital.org,098-765-4321,140,90,60-74,No,No,No
+david lee,25,other,heart disease,atorvastatin,2019-03-25,220,name@hospital.org,Unknown,110,70,<30,No,No,No
+emily davis,25,female,asthma,albuterol,2020-01-15,200,name@hospital.org,Unknown,120,80,<30,No,No,No
+john doe,60,other,heart disease,atorvastatin,2020-02-20,200,patient@example.com,123-456-7890,130,85,60-74,No,No,No
+michael wilson,70,male,diabetes,none,2020-01-15,200,Unknown,555-555-5555,140,90,60-74,No,No,No
+david lee,25,other,asthma,metformin,2020-02-20,180,contact@domain.com,555-555-5555,120,80,<30,No,No,No
+mary clark,25,female,Unknown,metformin,2018-04-05,200,name@hospital.org,123-456-7890,130,85,<30,No,Yes,Yes
+mary clark,25,male,heart disease,metformin,2018-04-05,160,name@hospital.org,Unknown,140,90,<30,No,No,No
+sarah johnson,40,other,Unknown,atorvastatin,2018-04-05,220,patient@example.com,Unknown,120,80,30-44,No,No,No
+michael wilson,40,other,hypertension,atorvastatin,2020-01-15,160,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+emily davis,35,other,heart disease,lisinopril,2019-12-01,200,Unknown,098-765-4321,130,85,30-44,No,Yes,Yes
+jane smith,40,female,asthma,lisinopril,2020-02-20,180,Unknown,Unknown,110,70,30-44,No,No,No
+emily davis,60,female,heart disease,metformin,2018-04-05,180,patient@example.com,098-765-4321,120,80,60-74,No,No,No
+mary clark,60,other,Unknown,none,2020-02-20,220,Unknown,Unknown,110,70,60-74,No,No,No
+mary clark,60,male,diabetes,lisinopril,2020-01-15,160,Unknown,098-765-4321,120,80,60-74,No,No,No
+robert brown,35,male,heart disease,lisinopril,2019-12-01,180,name@hospital.org,Unknown,120,80,30-44,Yes,No,No
+mary clark,40,female,asthma,atorvastatin,2020-01-15,160,name@hospital.org,098-765-4321,110,70,30-44,No,No,No
+john doe,70,male,hypertension,none,2020-02-20,200,contact@domain.com,098-765-4321,120,80,60-74,No,No,No
+laura martinez,70,female,diabetes,metformin,2019-12-01,200,Unknown,098-765-4321,140,90,60-74,Yes,No,No
+michael wilson,35,other,hypertension,lisinopril,2019-12-01,180,name@hospital.org,098-765-4321,120,80,30-44,No,No,No
+emily davis,70,female,heart disease,none,2020-01-15,220,name@hospital.org,123-456-7890,130,85,60-74,No,No,No
+laura martinez,60,female,Unknown,none,2018-04-05,220,contact@domain.com,Unknown,120,80,60-74,No,No,No
+david lee,40,other,Unknown,metformin,2020-02-20,180,Unknown,Unknown,130,85,30-44,No,No,No
+jane smith,25,male,asthma,none,2019-03-25,200,name@hospital.org,Unknown,120,80,<30,No,No,No
+john doe,40,female,Unknown,none,2019-03-25,180,patient@example.com,123-456-7890,120,80,30-44,No,No,No
+emily davis,40,female,diabetes,none,2020-01-15,200,patient@example.com,123-456-7890,110,70,30-44,No,No,No
+laura martinez,35,other,Unknown,lisinopril,2020-02-20,180,Unknown,123-456-7890,140,90,30-44,Yes,No,No
+jane smith,40,male,asthma,metformin,2020-02-20,180,Unknown,123-456-7890,140,90,30-44,No,No,No
+robert brown,60,female,heart disease,none,2020-01-15,200,contact@domain.com,098-765-4321,120,80,60-74,No,Yes,Yes
+john doe,70,other,heart disease,none,2020-02-20,180,patient@example.com,Unknown,110,70,60-74,Yes,No,No
+john doe,60,female,Unknown,lisinopril,2018-04-05,180,patient@example.com,555-555-5555,110,70,60-74,No,No,No
+robert brown,35,other,hypertension,metformin,2020-01-15,220,Unknown,Unknown,140,90,30-44,No,No,No
+michael wilson,60,male,heart disease,atorvastatin,2018-04-05,180,Unknown,123-456-7890,110,70,60-74,No,No,No
+robert brown,70,male,Unknown,lisinopril,2020-02-20,160,Unknown,Unknown,140,90,60-74,No,No,No
+john doe,40,male,asthma,metformin,2020-01-15,180,Unknown,123-456-7890,110,70,30-44,No,No,No
+john doe,35,male,Unknown,none,2020-02-20,160,patient@example.com,123-456-7890,120,80,30-44,No,No,No
+laura martinez,40,female,heart disease,metformin,2020-01-15,200,contact@domain.com,123-456-7890,140,90,30-44,Yes,No,No
+mary clark,25,female,asthma,metformin,2020-02-20,180,patient@example.com,123-456-7890,140,90,<30,No,No,No
+jane smith,40,male,Unknown,metformin,2018-04-05,180,Unknown,123-456-7890,130,85,30-44,Yes,No,No
+robert brown,25,male,diabetes,atorvastatin,2018-04-05,200,patient@example.com,Unknown,110,70,<30,Yes,No,No
+jane smith,25,male,asthma,metformin,2020-02-20,200,contact@domain.com,Unknown,110,70,<30,No,No,No
+robert brown,40,female,diabetes,atorvastatin,2020-01-15,200,name@hospital.org,123-456-7890,140,90,30-44,Yes,No,No
+david lee,35,male,hypertension,none,2019-03-25,180,patient@example.com,123-456-7890,120,80,30-44,Yes,No,No
+john doe,70,male,asthma,atorvastatin,2018-04-05,180,Unknown,123-456-7890,120,80,60-74,No,No,No
+mary clark,60,male,diabetes,none,2018-04-05,180,name@hospital.org,123-456-7890,120,80,60-74,No,No,No
+laura martinez,60,other,heart disease,none,2019-03-25,220,Unknown,098-765-4321,110,70,60-74,No,No,No
+mary clark,70,male,heart disease,atorvastatin,2020-02-20,200,Unknown,098-765-4321,130,85,60-74,No,No,No
+mary clark,25,other,hypertension,lisinopril,2020-01-15,180,Unknown,555-555-5555,140,90,<30,Yes,No,No
+mary clark,25,other,asthma,albuterol,2020-02-20,200,patient@example.com,123-456-7890,130,85,<30,No,Yes,Yes
+jane smith,35,male,asthma,metformin,2019-12-01,160,Unknown,555-555-5555,130,85,30-44,No,No,No
+james taylor,40,male,hypertension,metformin,2019-12-01,200,contact@domain.com,555-555-5555,130,85,30-44,No,No,No
+david lee,25,female,asthma,metformin,2018-04-05,220,Unknown,Unknown,120,80,<30,No,No,No
+emily davis,60,female,heart disease,none,2018-04-05,220,patient@example.com,098-765-4321,110,70,60-74,No,No,No
+mary clark,35,female,diabetes,metformin,2019-12-01,200,Unknown,098-765-4321,130,85,30-44,Yes,Yes,Yes
+michael wilson,40,female,heart disease,metformin,2019-12-01,160,contact@domain.com,123-456-7890,130,85,30-44,No,No,No
+jane smith,35,other,heart disease,atorvastatin,2020-02-20,220,name@hospital.org,123-456-7890,110,70,30-44,No,No,No
+laura martinez,40,male,diabetes,albuterol,2019-12-01,220,Unknown,Unknown,130,85,30-44,No,Yes,Yes
+emily davis,40,male,heart disease,atorvastatin,2020-02-20,160,Unknown,Unknown,140,90,30-44,No,No,No
+james taylor,70,male,hypertension,metformin,2020-02-20,200,contact@domain.com,Unknown,130,85,60-74,No,No,No
+michael wilson,25,female,diabetes,none,2020-02-20,220,patient@example.com,123-456-7890,140,90,<30,No,No,No
+james taylor,35,female,heart disease,atorvastatin,2018-04-05,180,name@hospital.org,123-456-7890,120,80,30-44,No,No,No
+emily davis,35,male,Unknown,atorvastatin,2018-04-05,220,contact@domain.com,Unknown,140,90,30-44,No,No,No
+mary clark,70,female,heart disease,lisinopril,2019-12-01,200,Unknown,Unknown,140,90,60-74,No,No,No
+michael wilson,60,male,hypertension,metformin,2018-04-05,200,name@hospital.org,Unknown,130,85,60-74,No,No,No
+james taylor,60,male,asthma,none,2019-12-01,200,Unknown,098-765-4321,120,80,60-74,Yes,No,No
+laura martinez,25,male,heart disease,atorvastatin,2018-04-05,180,contact@domain.com,555-555-5555,140,90,<30,No,No,No
+robert brown,25,male,asthma,atorvastatin,2020-01-15,200,Unknown,555-555-5555,110,70,<30,No,No,No
+robert brown,70,male,heart disease,metformin,2019-12-01,180,Unknown,098-765-4321,140,90,60-74,No,No,No
+emily davis,60,male,diabetes,lisinopril,2018-04-05,180,patient@example.com,Unknown,120,80,60-74,No,No,No
+jane smith,40,female,asthma,atorvastatin,2018-04-05,160,Unknown,123-456-7890,140,90,30-44,No,No,No
+john doe,35,male,Unknown,lisinopril,2020-02-20,220,Unknown,098-765-4321,130,85,30-44,No,Yes,Yes
+david lee,25,male,diabetes,albuterol,2019-03-25,160,Unknown,Unknown,120,80,<30,No,No,No
+laura martinez,35,female,diabetes,metformin,2019-12-01,160,name@hospital.org,098-765-4321,130,85,30-44,No,No,No
+david lee,35,female,diabetes,albuterol,2019-03-25,220,Unknown,123-456-7890,120,80,30-44,No,No,No
+michael wilson,40,female,diabetes,albuterol,2019-03-25,220,Unknown,555-555-5555,130,85,30-44,No,No,No
+john doe,60,male,heart disease,albuterol,2019-12-01,220,contact@domain.com,Unknown,120,80,60-74,No,No,No
+david lee,25,other,heart disease,metformin,2018-04-05,220,patient@example.com,Unknown,130,85,<30,No,Yes,Yes
+david lee,35,other,heart disease,metformin,2019-12-01,220,name@hospital.org,098-765-4321,130,85,30-44,No,Yes,Yes
+james taylor,25,female,Unknown,none,2019-03-25,160,Unknown,123-456-7890,120,80,<30,No,No,No
+robert brown,40,other,Unknown,lisinopril,2018-04-05,180,contact@domain.com,123-456-7890,140,90,30-44,Yes,No,No
+john doe,40,male,hypertension,none,2019-12-01,200,name@hospital.org,123-456-7890,130,85,30-44,No,No,No
+john doe,25,other,Unknown,none,2019-12-01,180,name@hospital.org,123-456-7890,130,85,<30,Yes,No,No
+emily davis,25,male,heart disease,albuterol,2018-04-05,200,Unknown,Unknown,110,70,<30,Yes,No,No
+james taylor,60,other,heart disease,none,2020-01-15,160,name@hospital.org,Unknown,130,85,60-74,No,No,No
+sarah johnson,35,male,hypertension,atorvastatin,2020-01-15,220,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+robert brown,35,other,hypertension,lisinopril,2018-04-05,220,name@hospital.org,555-555-5555,120,80,30-44,No,No,No
+john doe,40,male,Unknown,none,2020-02-20,160,Unknown,098-765-4321,120,80,30-44,No,No,No
+emily davis,40,male,asthma,atorvastatin,2019-12-01,180,contact@domain.com,Unknown,120,80,30-44,Yes,No,No
+james taylor,70,other,hypertension,atorvastatin,2019-12-01,160,patient@example.com,098-765-4321,140,90,60-74,No,No,No
+robert brown,35,male,diabetes,atorvastatin,2019-03-25,200,patient@example.com,555-555-5555,140,90,30-44,No,No,No
+james taylor,60,male,heart disease,atorvastatin,2018-04-05,220,Unknown,Unknown,110,70,60-74,No,No,No
+david lee,40,male,diabetes,albuterol,2019-03-25,180,Unknown,123-456-7890,130,85,30-44,No,No,No
+emily davis,40,other,heart disease,atorvastatin,2019-03-25,200,Unknown,555-555-5555,130,85,30-44,No,No,No
+robert brown,70,other,heart disease,albuterol,2020-01-15,200,patient@example.com,Unknown,120,80,60-74,No,No,No
+mary clark,60,male,hypertension,albuterol,2019-12-01,160,patient@example.com,555-555-5555,120,80,60-74,No,Yes,Yes
+michael wilson,40,male,hypertension,atorvastatin,2019-03-25,180,patient@example.com,Unknown,140,90,30-44,Yes,No,No
+michael wilson,60,other,diabetes,lisinopril,2020-01-15,220,patient@example.com,Unknown,140,90,60-74,No,No,No
+robert brown,40,other,heart disease,atorvastatin,2018-04-05,180,name@hospital.org,Unknown,120,80,30-44,No,No,No
+james taylor,60,male,diabetes,atorvastatin,2019-03-25,200,contact@domain.com,098-765-4321,140,90,60-74,No,No,No
+emily davis,60,male,asthma,atorvastatin,2019-12-01,180,contact@domain.com,Unknown,120,80,60-74,No,No,No
+michael wilson,25,male,diabetes,lisinopril,2019-03-25,200,Unknown,555-555-5555,110,70,<30,Yes,No,No
+emily davis,40,female,Unknown,metformin,2018-04-05,200,name@hospital.org,Unknown,130,85,30-44,Yes,No,No
+michael wilson,60,other,diabetes,metformin,2019-03-25,180,patient@example.com,123-456-7890,120,80,60-74,No,Yes,Yes
+david lee,70,female,Unknown,albuterol,2019-12-01,220,patient@example.com,555-555-5555,130,85,60-74,No,No,No
+james taylor,60,other,Unknown,albuterol,2020-01-15,180,Unknown,Unknown,130,85,60-74,Yes,No,No
+david lee,35,other,Unknown,lisinopril,2019-12-01,180,Unknown,Unknown,110,70,30-44,No,No,No
+michael wilson,40,other,asthma,none,2020-01-15,200,Unknown,123-456-7890,140,90,30-44,No,No,No
+mary clark,35,other,diabetes,metformin,2020-02-20,180,patient@example.com,Unknown,130,85,30-44,No,Yes,Yes
+mary clark,40,other,diabetes,albuterol,2019-12-01,180,Unknown,555-555-5555,140,90,30-44,No,No,No
+david lee,35,other,asthma,metformin,2019-12-01,160,name@hospital.org,555-555-5555,130,85,30-44,No,No,No
+mary clark,60,other,heart disease,lisinopril,2018-04-05,180,contact@domain.com,123-456-7890,120,80,60-74,Yes,No,No
+michael wilson,60,female,hypertension,lisinopril,2019-03-25,220,patient@example.com,Unknown,130,85,60-74,No,No,No
+robert brown,25,male,diabetes,none,2020-01-15,220,name@hospital.org,555-555-5555,140,90,<30,No,No,No
+david lee,70,male,hypertension,none,2020-01-15,160,patient@example.com,555-555-5555,130,85,60-74,No,No,No
+jane smith,35,female,asthma,lisinopril,2018-04-05,220,Unknown,555-555-5555,120,80,30-44,No,No,No
+james taylor,40,female,heart disease,albuterol,2018-04-05,180,Unknown,Unknown,110,70,30-44,No,No,No
+mary clark,25,female,heart disease,metformin,2019-03-25,160,Unknown,123-456-7890,140,90,<30,No,No,No
+mary clark,35,female,heart disease,atorvastatin,2019-03-25,200,contact@domain.com,555-555-5555,130,85,30-44,No,No,No
+john doe,35,other,asthma,none,2019-12-01,180,Unknown,Unknown,140,90,30-44,Yes,No,No
+sarah johnson,25,male,Unknown,atorvastatin,2020-02-20,200,patient@example.com,Unknown,110,70,<30,Yes,No,No
+david lee,60,other,Unknown,albuterol,2019-03-25,180,Unknown,098-765-4321,130,85,60-74,Yes,No,No
+laura martinez,35,male,hypertension,none,2018-04-05,180,patient@example.com,123-456-7890,130,85,30-44,No,No,No
+mary clark,60,male,Unknown,atorvastatin,2019-03-25,200,contact@domain.com,Unknown,140,90,60-74,No,No,No
+james taylor,25,female,Unknown,albuterol,2020-01-15,160,Unknown,555-555-5555,140,90,<30,No,No,No
+jane smith,60,other,heart disease,metformin,2020-02-20,160,Unknown,098-765-4321,120,80,60-74,No,No,No
+mary clark,40,female,heart disease,albuterol,2019-12-01,200,Unknown,123-456-7890,110,70,30-44,Yes,No,No
+jane smith,40,other,hypertension,none,2020-01-15,200,Unknown,Unknown,120,80,30-44,No,No,No
+michael wilson,35,male,diabetes,lisinopril,2020-01-15,200,Unknown,098-765-4321,130,85,30-44,No,No,No
+michael wilson,70,female,hypertension,metformin,2020-02-20,200,Unknown,098-765-4321,140,90,60-74,No,No,No
+sarah johnson,40,female,hypertension,atorvastatin,2019-12-01,220,Unknown,Unknown,130,85,30-44,No,No,No
+robert brown,60,male,asthma,none,2018-04-05,220,patient@example.com,123-456-7890,130,85,60-74,No,No,No
+laura martinez,35,male,asthma,lisinopril,2019-12-01,180,contact@domain.com,Unknown,130,85,30-44,Yes,Yes,Yes
+john doe,60,male,hypertension,albuterol,2019-03-25,200,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+sarah johnson,40,female,hypertension,lisinopril,2020-01-15,200,patient@example.com,555-555-5555,130,85,30-44,No,No,No
+emily davis,25,other,hypertension,none,2019-03-25,160,Unknown,Unknown,140,90,<30,No,No,No
+john doe,35,female,Unknown,none,2018-04-05,160,patient@example.com,098-765-4321,130,85,30-44,No,No,No
+david lee,40,other,asthma,lisinopril,2019-03-25,180,Unknown,123-456-7890,130,85,30-44,Yes,Yes,Yes
+james taylor,40,female,hypertension,albuterol,2019-12-01,200,Unknown,Unknown,140,90,30-44,No,No,No
+emily davis,35,female,heart disease,lisinopril,2019-03-25,200,Unknown,Unknown,130,85,30-44,Yes,No,No
+emily davis,60,male,heart disease,none,2018-04-05,160,Unknown,123-456-7890,110,70,60-74,No,No,No
+sarah johnson,70,other,Unknown,none,2018-04-05,160,name@hospital.org,Unknown,110,70,60-74,No,No,No
+robert brown,40,female,Unknown,atorvastatin,2018-04-05,220,patient@example.com,555-555-5555,130,85,30-44,No,No,No
+sarah johnson,40,female,diabetes,atorvastatin,2019-12-01,200,name@hospital.org,Unknown,140,90,30-44,Yes,No,No
+david lee,40,male,diabetes,metformin,2018-04-05,180,patient@example.com,555-555-5555,130,85,30-44,Yes,No,No
+mary clark,70,male,diabetes,none,2020-01-15,200,contact@domain.com,098-765-4321,130,85,60-74,No,No,No
+mary clark,60,other,Unknown,atorvastatin,2018-04-05,200,Unknown,098-765-4321,120,80,60-74,No,Yes,Yes
+robert brown,60,female,Unknown,lisinopril,2019-03-25,220,contact@domain.com,Unknown,110,70,60-74,No,No,No
+robert brown,40,female,heart disease,lisinopril,2019-03-25,180,patient@example.com,098-765-4321,130,85,30-44,No,Yes,Yes
+jane smith,60,other,Unknown,albuterol,2019-12-01,180,name@hospital.org,Unknown,130,85,60-74,No,No,No
+mary clark,70,male,heart disease,atorvastatin,2019-03-25,200,Unknown,123-456-7890,120,80,60-74,Yes,Yes,Yes
+emily davis,35,female,diabetes,metformin,2019-12-01,200,patient@example.com,123-456-7890,110,70,30-44,Yes,No,No
+laura martinez,25,other,diabetes,lisinopril,2019-12-01,160,Unknown,555-555-5555,130,85,<30,No,Yes,Yes
+james taylor,25,male,diabetes,lisinopril,2018-04-05,200,contact@domain.com,Unknown,110,70,<30,Yes,No,No
+david lee,25,male,hypertension,lisinopril,2020-01-15,200,Unknown,Unknown,120,80,<30,Yes,Yes,Yes
+john doe,40,other,hypertension,albuterol,2018-04-05,180,name@hospital.org,555-555-5555,110,70,30-44,Yes,No,No
+robert brown,40,female,asthma,atorvastatin,2018-04-05,220,patient@example.com,123-456-7890,130,85,30-44,No,Yes,Yes
+james taylor,60,female,asthma,lisinopril,2019-12-01,200,name@hospital.org,555-555-5555,120,80,60-74,Yes,Yes,Yes
+john doe,35,male,asthma,lisinopril,2019-12-01,200,name@hospital.org,Unknown,140,90,30-44,No,No,No
+james taylor,70,female,hypertension,metformin,2019-03-25,200,patient@example.com,098-765-4321,110,70,60-74,No,No,No
+laura martinez,35,female,hypertension,metformin,2019-03-25,160,name@hospital.org,Unknown,110,70,30-44,No,No,No
+john doe,70,female,asthma,atorvastatin,2018-04-05,220,Unknown,098-765-4321,110,70,60-74,No,No,No
+sarah johnson,40,male,asthma,atorvastatin,2020-02-20,200,Unknown,098-765-4321,120,80,30-44,No,No,No
+michael wilson,25,other,Unknown,none,2020-02-20,220,Unknown,098-765-4321,130,85,<30,No,Yes,Yes
+sarah johnson,40,female,asthma,metformin,2019-03-25,220,Unknown,555-555-5555,110,70,30-44,No,No,No
+mary clark,40,male,Unknown,none,2020-02-20,160,name@hospital.org,123-456-7890,120,80,30-44,No,No,No
+michael wilson,40,male,heart disease,albuterol,2019-03-25,220,patient@example.com,555-555-5555,140,90,30-44,No,No,No
+sarah johnson,70,other,hypertension,none,2019-12-01,180,patient@example.com,123-456-7890,110,70,60-74,Yes,No,No
+michael wilson,60,female,asthma,lisinopril,2018-04-05,220,Unknown,Unknown,110,70,60-74,No,No,No
+michael wilson,60,female,hypertension,none,2020-01-15,160,patient@example.com,Unknown,120,80,60-74,No,No,No
+emily davis,70,other,hypertension,atorvastatin,2018-04-05,160,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+robert brown,40,other,hypertension,albuterol,2019-03-25,160,name@hospital.org,555-555-5555,140,90,30-44,No,No,No
+robert brown,40,male,heart disease,lisinopril,2019-03-25,200,patient@example.com,555-555-5555,110,70,30-44,No,No,No
+james taylor,40,other,asthma,albuterol,2019-03-25,200,contact@domain.com,555-555-5555,140,90,30-44,No,No,No
+jane smith,40,female,diabetes,albuterol,2020-02-20,180,contact@domain.com,098-765-4321,130,85,30-44,No,No,No
+james taylor,35,male,diabetes,lisinopril,2020-02-20,180,contact@domain.com,555-555-5555,130,85,30-44,Yes,No,No
+john doe,25,male,diabetes,none,2019-03-25,220,name@hospital.org,123-456-7890,140,90,<30,No,No,No
+john doe,40,female,hypertension,albuterol,2019-03-25,160,Unknown,123-456-7890,120,80,30-44,No,No,No
+michael wilson,70,male,Unknown,albuterol,2020-02-20,180,Unknown,098-765-4321,140,90,60-74,No,No,No
+sarah johnson,25,female,hypertension,metformin,2019-03-25,200,Unknown,123-456-7890,140,90,<30,Yes,No,No
+sarah johnson,40,female,hypertension,albuterol,2019-03-25,200,name@hospital.org,Unknown,120,80,30-44,No,No,No
+robert brown,70,female,diabetes,metformin,2018-04-05,160,name@hospital.org,Unknown,120,80,60-74,No,No,No
+david lee,25,other,hypertension,none,2020-01-15,200,contact@domain.com,555-555-5555,130,85,<30,No,Yes,Yes
+james taylor,70,other,diabetes,none,2020-02-20,180,patient@example.com,Unknown,120,80,60-74,Yes,Yes,Yes
+mary clark,40,other,Unknown,none,2018-04-05,180,Unknown,555-555-5555,120,80,30-44,Yes,No,No
+laura martinez,35,female,asthma,atorvastatin,2020-01-15,180,Unknown,Unknown,130,85,30-44,No,No,No
+sarah johnson,40,female,diabetes,none,2019-03-25,220,patient@example.com,555-555-5555,130,85,30-44,No,No,No
+laura martinez,40,other,Unknown,albuterol,2019-03-25,200,contact@domain.com,098-765-4321,140,90,30-44,No,No,No
+michael wilson,70,male,asthma,lisinopril,2018-04-05,180,patient@example.com,123-456-7890,110,70,60-74,No,No,No
+laura martinez,60,female,heart disease,metformin,2019-03-25,160,patient@example.com,123-456-7890,140,90,60-74,No,No,No
+mary clark,40,male,diabetes,atorvastatin,2019-12-01,220,Unknown,098-765-4321,140,90,30-44,No,No,No
+emily davis,40,male,diabetes,none,2018-04-05,180,contact@domain.com,Unknown,110,70,30-44,No,No,No
+mary clark,35,female,heart disease,none,2020-01-15,200,name@hospital.org,Unknown,120,80,30-44,No,No,No
+laura martinez,35,female,heart disease,lisinopril,2018-04-05,200,Unknown,Unknown,130,85,30-44,Yes,No,No
+mary clark,40,male,diabetes,lisinopril,2020-02-20,160,name@hospital.org,123-456-7890,140,90,30-44,No,No,No
+jane smith,60,male,heart disease,atorvastatin,2018-04-05,200,contact@domain.com,Unknown,110,70,60-74,No,No,No
+michael wilson,40,other,hypertension,metformin,2019-03-25,220,patient@example.com,555-555-5555,130,85,30-44,No,Yes,Yes
+james taylor,60,other,asthma,none,2019-03-25,220,Unknown,Unknown,140,90,60-74,No,No,No
+emily davis,35,female,asthma,atorvastatin,2019-12-01,200,Unknown,Unknown,130,85,30-44,Yes,No,No
+sarah johnson,25,other,asthma,albuterol,2019-12-01,180,contact@domain.com,098-765-4321,120,80,<30,Yes,No,No
+john doe,70,other,hypertension,albuterol,2019-12-01,160,Unknown,555-555-5555,140,90,60-74,No,No,No
+james taylor,35,other,heart disease,atorvastatin,2020-01-15,160,name@hospital.org,Unknown,140,90,30-44,No,No,No
+john doe,35,other,Unknown,none,2019-12-01,180,Unknown,555-555-5555,110,70,30-44,Yes,No,No
+michael wilson,40,male,heart disease,atorvastatin,2020-01-15,180,contact@domain.com,Unknown,130,85,30-44,Yes,Yes,Yes
+emily davis,40,female,diabetes,none,2019-12-01,220,contact@domain.com,123-456-7890,130,85,30-44,No,Yes,Yes
+robert brown,40,other,asthma,lisinopril,2020-01-15,180,name@hospital.org,Unknown,120,80,30-44,Yes,No,No
+sarah johnson,70,male,heart disease,atorvastatin,2018-04-05,180,Unknown,098-765-4321,130,85,60-74,No,No,No
+jane smith,40,male,Unknown,none,2018-04-05,200,Unknown,Unknown,120,80,30-44,No,No,No
+robert brown,60,male,diabetes,atorvastatin,2019-03-25,200,patient@example.com,Unknown,140,90,60-74,Yes,No,No
+michael wilson,40,other,hypertension,atorvastatin,2020-01-15,160,Unknown,098-765-4321,140,90,30-44,No,No,No
+james taylor,25,other,hypertension,none,2020-02-20,180,contact@domain.com,Unknown,130,85,<30,No,Yes,Yes
+jane smith,35,female,Unknown,none,2019-03-25,160,patient@example.com,Unknown,130,85,30-44,No,No,No
+mary clark,60,other,diabetes,metformin,2018-04-05,180,contact@domain.com,Unknown,110,70,60-74,No,No,No
+laura martinez,25,other,asthma,atorvastatin,2020-01-15,180,patient@example.com,555-555-5555,130,85,<30,Yes,No,No
+jane smith,60,male,heart disease,albuterol,2019-12-01,200,Unknown,Unknown,140,90,60-74,No,No,No
+michael wilson,60,female,diabetes,atorvastatin,2020-02-20,160,patient@example.com,Unknown,110,70,60-74,No,No,No
+david lee,35,other,hypertension,atorvastatin,2018-04-05,180,contact@domain.com,123-456-7890,130,85,30-44,No,No,No
+laura martinez,40,other,Unknown,none,2019-03-25,220,Unknown,Unknown,130,85,30-44,No,No,No
+john doe,40,male,Unknown,atorvastatin,2020-01-15,180,contact@domain.com,555-555-5555,110,70,30-44,Yes,No,No
+sarah johnson,70,male,heart disease,atorvastatin,2020-02-20,200,name@hospital.org,098-765-4321,140,90,60-74,No,No,No
+jane smith,70,female,Unknown,none,2019-12-01,220,name@hospital.org,098-765-4321,110,70,60-74,No,No,No
+john doe,35,female,diabetes,atorvastatin,2019-03-25,200,name@hospital.org,123-456-7890,140,90,30-44,No,No,No
+michael wilson,35,male,asthma,lisinopril,2020-01-15,220,Unknown,555-555-5555,110,70,30-44,No,No,No
+mary clark,35,male,heart disease,metformin,2018-04-05,180,Unknown,Unknown,110,70,30-44,Yes,No,No
+james taylor,25,other,diabetes,albuterol,2019-03-25,180,Unknown,098-765-4321,130,85,<30,No,No,No
+sarah johnson,70,male,asthma,atorvastatin,2018-04-05,200,contact@domain.com,555-555-5555,140,90,60-74,Yes,No,No
+john doe,40,other,diabetes,lisinopril,2020-01-15,180,patient@example.com,Unknown,130,85,30-44,Yes,No,No
+john doe,40,female,diabetes,atorvastatin,2019-03-25,200,contact@domain.com,123-456-7890,120,80,30-44,Yes,No,No
+jane smith,60,female,Unknown,atorvastatin,2018-04-05,160,contact@domain.com,555-555-5555,120,80,60-74,No,No,No
+james taylor,60,other,asthma,none,2019-12-01,220,contact@domain.com,555-555-5555,140,90,60-74,No,No,No
+robert brown,60,male,heart disease,none,2019-12-01,220,contact@domain.com,Unknown,110,70,60-74,No,No,No
+john doe,35,female,heart disease,none,2020-01-15,220,Unknown,555-555-5555,130,85,30-44,No,No,No
+michael wilson,40,male,asthma,lisinopril,2019-03-25,160,patient@example.com,Unknown,130,85,30-44,No,No,No
+david lee,70,female,Unknown,atorvastatin,2020-02-20,180,contact@domain.com,123-456-7890,140,90,60-74,No,No,No
+sarah johnson,35,other,hypertension,metformin,2019-03-25,180,Unknown,123-456-7890,140,90,30-44,Yes,No,No
+john doe,25,other,diabetes,albuterol,2019-12-01,180,contact@domain.com,Unknown,120,80,<30,No,No,No
+michael wilson,60,other,Unknown,none,2018-04-05,160,name@hospital.org,Unknown,120,80,60-74,No,Yes,Yes
+michael wilson,35,female,asthma,none,2020-02-20,220,contact@domain.com,Unknown,140,90,30-44,No,No,No
+sarah johnson,35,male,diabetes,atorvastatin,2020-01-15,180,contact@domain.com,098-765-4321,130,85,30-44,Yes,Yes,Yes
+robert brown,25,male,heart disease,atorvastatin,2020-02-20,200,Unknown,098-765-4321,140,90,<30,No,No,No
+michael wilson,40,male,hypertension,lisinopril,2020-01-15,200,name@hospital.org,Unknown,110,70,30-44,No,No,No
+david lee,40,female,heart disease,lisinopril,2020-02-20,180,patient@example.com,123-456-7890,110,70,30-44,No,No,No
+michael wilson,70,female,asthma,none,2020-01-15,220,contact@domain.com,098-765-4321,120,80,60-74,No,No,No
+michael wilson,40,female,diabetes,atorvastatin,2020-01-15,200,patient@example.com,555-555-5555,120,80,30-44,No,No,No
+michael wilson,60,female,asthma,metformin,2020-02-20,180,name@hospital.org,123-456-7890,120,80,60-74,No,Yes,Yes
+mary clark,35,female,diabetes,albuterol,2020-02-20,160,contact@domain.com,555-555-5555,140,90,30-44,No,No,No
+mary clark,25,male,Unknown,atorvastatin,2020-01-15,180,Unknown,Unknown,130,85,<30,No,No,No
+robert brown,25,female,hypertension,atorvastatin,2019-12-01,180,Unknown,123-456-7890,120,80,<30,No,No,No
+john doe,40,female,Unknown,lisinopril,2020-02-20,180,Unknown,Unknown,130,85,30-44,No,No,No
+michael wilson,40,male,Unknown,albuterol,2019-03-25,180,Unknown,Unknown,130,85,30-44,Yes,No,No
+james taylor,40,female,asthma,none,2018-04-05,180,Unknown,Unknown,140,90,30-44,No,No,No
+john doe,35,male,hypertension,atorvastatin,2020-01-15,180,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+robert brown,40,male,diabetes,none,2020-01-15,180,Unknown,Unknown,140,90,30-44,Yes,No,No
+emily davis,70,other,diabetes,atorvastatin,2018-04-05,180,contact@domain.com,098-765-4321,120,80,60-74,Yes,No,No
+john doe,25,other,heart disease,none,2019-12-01,160,patient@example.com,123-456-7890,130,85,<30,No,No,No
+john doe,25,other,diabetes,albuterol,2018-04-05,220,patient@example.com,098-765-4321,140,90,<30,No,No,No
+laura martinez,60,other,asthma,lisinopril,2020-02-20,200,Unknown,555-555-5555,140,90,60-74,No,No,No
+jane smith,60,female,Unknown,albuterol,2018-04-05,200,Unknown,555-555-5555,140,90,60-74,No,No,No
+laura martinez,35,other,Unknown,metformin,2020-01-15,180,name@hospital.org,123-456-7890,120,80,30-44,No,No,No
+david lee,70,male,Unknown,lisinopril,2018-04-05,160,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+mary clark,40,female,hypertension,albuterol,2019-03-25,180,Unknown,Unknown,140,90,30-44,No,No,No
+mary clark,40,other,diabetes,metformin,2020-02-20,200,Unknown,555-555-5555,120,80,30-44,No,No,No
+jane smith,35,male,asthma,atorvastatin,2018-04-05,180,contact@domain.com,123-456-7890,130,85,30-44,Yes,No,No
+sarah johnson,60,female,hypertension,atorvastatin,2020-01-15,220,contact@domain.com,Unknown,110,70,60-74,No,No,No
+sarah johnson,40,female,heart disease,none,2020-02-20,160,patient@example.com,Unknown,120,80,30-44,No,No,No
+robert brown,60,other,asthma,lisinopril,2020-01-15,180,patient@example.com,555-555-5555,110,70,60-74,Yes,No,No
+jane smith,40,female,asthma,atorvastatin,2019-12-01,220,name@hospital.org,123-456-7890,140,90,30-44,No,No,No
+john doe,40,male,asthma,lisinopril,2019-03-25,160,name@hospital.org,123-456-7890,140,90,30-44,No,No,No
+sarah johnson,35,female,Unknown,atorvastatin,2019-12-01,160,name@hospital.org,123-456-7890,120,80,30-44,No,No,No
+michael wilson,40,male,asthma,none,2019-03-25,200,name@hospital.org,555-555-5555,110,70,30-44,No,No,No
+james taylor,70,female,diabetes,albuterol,2018-04-05,200,Unknown,Unknown,140,90,60-74,Yes,No,No
+john doe,25,other,asthma,none,2020-02-20,160,Unknown,123-456-7890,130,85,<30,No,No,No
+david lee,70,male,Unknown,metformin,2018-04-05,160,patient@example.com,Unknown,120,80,60-74,No,Yes,Yes
+michael wilson,70,female,asthma,atorvastatin,2019-03-25,220,contact@domain.com,123-456-7890,120,80,60-74,No,Yes,Yes
+michael wilson,25,female,heart disease,metformin,2019-03-25,200,contact@domain.com,Unknown,140,90,<30,No,No,No
+jane smith,70,female,heart disease,metformin,2019-03-25,180,Unknown,555-555-5555,110,70,60-74,No,No,No
+robert brown,40,male,Unknown,lisinopril,2020-01-15,200,Unknown,123-456-7890,140,90,30-44,No,No,No
+david lee,40,male,diabetes,atorvastatin,2020-02-20,180,name@hospital.org,123-456-7890,110,70,30-44,No,No,No
+sarah johnson,40,male,diabetes,metformin,2018-04-05,180,name@hospital.org,Unknown,130,85,30-44,Yes,No,No
+jane smith,25,other,hypertension,albuterol,2018-04-05,180,Unknown,Unknown,110,70,<30,Yes,No,No
+sarah johnson,70,other,Unknown,metformin,2019-12-01,160,contact@domain.com,123-456-7890,140,90,60-74,No,No,No
+jane smith,25,male,asthma,albuterol,2019-03-25,200,name@hospital.org,123-456-7890,130,85,<30,Yes,No,No
+jane smith,40,female,Unknown,lisinopril,2019-03-25,160,contact@domain.com,Unknown,120,80,30-44,No,No,No
+jane smith,70,other,hypertension,metformin,2019-03-25,200,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+robert brown,70,male,Unknown,none,2018-04-05,200,contact@domain.com,098-765-4321,140,90,60-74,Yes,No,No
+jane smith,60,female,Unknown,lisinopril,2019-12-01,200,contact@domain.com,098-765-4321,140,90,60-74,No,No,No
+emily davis,60,other,hypertension,albuterol,2020-01-15,200,contact@domain.com,123-456-7890,140,90,60-74,No,No,No
+james taylor,40,female,diabetes,lisinopril,2020-02-20,200,name@hospital.org,Unknown,130,85,30-44,Yes,No,No
+sarah johnson,35,female,asthma,metformin,2020-01-15,200,patient@example.com,555-555-5555,120,80,30-44,No,No,No
+john doe,60,female,hypertension,atorvastatin,2018-04-05,200,Unknown,555-555-5555,110,70,60-74,Yes,No,No
+laura martinez,25,female,heart disease,atorvastatin,2019-03-25,200,contact@domain.com,098-765-4321,120,80,<30,Yes,No,No
+david lee,60,other,diabetes,albuterol,2020-02-20,180,contact@domain.com,Unknown,130,85,60-74,Yes,No,No
+mary clark,40,other,heart disease,albuterol,2018-04-05,180,contact@domain.com,098-765-4321,140,90,30-44,No,No,No
+robert brown,70,other,diabetes,atorvastatin,2018-04-05,200,patient@example.com,123-456-7890,120,80,60-74,No,Yes,Yes
+john doe,40,male,asthma,albuterol,2018-04-05,220,Unknown,Unknown,140,90,30-44,No,No,No
+michael wilson,70,other,asthma,lisinopril,2020-02-20,180,name@hospital.org,555-555-5555,110,70,60-74,Yes,No,No
+emily davis,70,female,Unknown,none,2020-02-20,200,patient@example.com,Unknown,120,80,60-74,No,Yes,Yes
+mary clark,35,other,heart disease,none,2019-12-01,160,contact@domain.com,Unknown,140,90,30-44,No,No,No
+laura martinez,60,female,diabetes,lisinopril,2019-12-01,200,patient@example.com,123-456-7890,120,80,60-74,Yes,Yes,Yes
+john doe,25,male,asthma,none,2020-01-15,200,patient@example.com,098-765-4321,120,80,<30,Yes,No,No
+mary clark,25,female,hypertension,metformin,2020-02-20,220,patient@example.com,123-456-7890,130,85,<30,No,No,No
+john doe,40,female,asthma,lisinopril,2020-02-20,180,Unknown,Unknown,140,90,30-44,No,No,No
+emily davis,70,female,hypertension,albuterol,2020-02-20,180,Unknown,555-555-5555,110,70,60-74,No,No,No
+laura martinez,25,male,diabetes,lisinopril,2019-12-01,200,name@hospital.org,Unknown,120,80,<30,Yes,No,No
+michael wilson,35,other,asthma,atorvastatin,2018-04-05,200,Unknown,Unknown,140,90,30-44,No,No,No
+jane smith,70,other,asthma,albuterol,2019-03-25,160,Unknown,Unknown,120,80,60-74,No,No,No
+sarah johnson,35,male,diabetes,atorvastatin,2019-12-01,160,Unknown,Unknown,110,70,30-44,No,No,No
+michael wilson,25,female,asthma,albuterol,2020-02-20,200,Unknown,Unknown,140,90,<30,No,No,No
+jane smith,25,other,hypertension,none,2019-12-01,180,patient@example.com,098-765-4321,110,70,<30,Yes,No,No
+robert brown,40,male,asthma,lisinopril,2020-01-15,160,patient@example.com,Unknown,130,85,30-44,No,Yes,Yes
+james taylor,25,other,heart disease,metformin,2020-02-20,180,contact@domain.com,123-456-7890,110,70,<30,No,No,No
+david lee,70,male,Unknown,albuterol,2020-01-15,200,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+david lee,70,female,hypertension,albuterol,2020-02-20,220,contact@domain.com,123-456-7890,140,90,60-74,No,No,No
+sarah johnson,70,other,heart disease,atorvastatin,2019-12-01,180,name@hospital.org,Unknown,120,80,60-74,Yes,Yes,Yes
+laura martinez,40,male,diabetes,none,2018-04-05,200,patient@example.com,Unknown,140,90,30-44,No,No,No
+emily davis,40,other,hypertension,atorvastatin,2019-03-25,160,name@hospital.org,Unknown,140,90,30-44,No,No,No
+laura martinez,25,other,Unknown,atorvastatin,2020-01-15,180,Unknown,Unknown,130,85,<30,Yes,No,No
+emily davis,40,other,Unknown,none,2019-12-01,180,patient@example.com,098-765-4321,140,90,30-44,No,No,No
+laura martinez,40,other,diabetes,metformin,2018-04-05,180,name@hospital.org,Unknown,130,85,30-44,Yes,Yes,Yes
+james taylor,40,male,diabetes,atorvastatin,2019-12-01,180,Unknown,123-456-7890,130,85,30-44,Yes,No,No
+robert brown,25,female,hypertension,atorvastatin,2020-01-15,180,name@hospital.org,123-456-7890,130,85,<30,No,No,No
+robert brown,40,male,asthma,albuterol,2019-03-25,180,Unknown,Unknown,140,90,30-44,No,No,No
+jane smith,25,male,diabetes,none,2019-12-01,200,Unknown,098-765-4321,110,70,<30,Yes,No,No
+mary clark,25,male,asthma,lisinopril,2020-02-20,180,patient@example.com,098-765-4321,110,70,<30,No,No,No
+robert brown,25,female,heart disease,metformin,2018-04-05,200,contact@domain.com,098-765-4321,130,85,<30,No,No,No
+robert brown,60,other,Unknown,metformin,2019-12-01,180,Unknown,123-456-7890,140,90,60-74,No,No,No
+michael wilson,70,other,asthma,none,2018-04-05,180,Unknown,Unknown,110,70,60-74,No,No,No
+michael wilson,25,other,Unknown,albuterol,2020-02-20,180,patient@example.com,098-765-4321,140,90,<30,Yes,No,No
+jane smith,60,female,asthma,albuterol,2019-03-25,200,contact@domain.com,123-456-7890,140,90,60-74,No,No,No
+mary clark,40,other,heart disease,none,2019-03-25,220,Unknown,123-456-7890,130,85,30-44,No,No,No
+sarah johnson,40,female,diabetes,albuterol,2020-02-20,220,Unknown,Unknown,130,85,30-44,No,No,No
+michael wilson,70,other,heart disease,metformin,2018-04-05,160,contact@domain.com,Unknown,120,80,60-74,No,No,No
+sarah johnson,40,other,diabetes,metformin,2019-12-01,180,name@hospital.org,Unknown,110,70,30-44,No,No,No
+john doe,70,male,diabetes,lisinopril,2020-02-20,180,patient@example.com,098-765-4321,110,70,60-74,No,No,No
+michael wilson,40,female,Unknown,none,2020-01-15,200,contact@domain.com,098-765-4321,110,70,30-44,No,No,No
+james taylor,70,male,heart disease,atorvastatin,2018-04-05,220,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+mary clark,40,male,asthma,atorvastatin,2019-03-25,160,Unknown,098-765-4321,140,90,30-44,No,No,No
+jane smith,40,male,heart disease,lisinopril,2020-02-20,200,Unknown,Unknown,130,85,30-44,No,No,No
+john doe,40,female,Unknown,lisinopril,2019-03-25,180,Unknown,123-456-7890,110,70,30-44,No,No,No
+mary clark,40,female,diabetes,albuterol,2018-04-05,220,patient@example.com,098-765-4321,120,80,30-44,No,No,No
+james taylor,40,other,Unknown,lisinopril,2019-03-25,160,Unknown,123-456-7890,110,70,30-44,No,No,No
+mary clark,25,male,hypertension,lisinopril,2020-02-20,200,contact@domain.com,555-555-5555,140,90,<30,Yes,No,No
+james taylor,35,other,hypertension,atorvastatin,2018-04-05,220,Unknown,Unknown,140,90,30-44,No,No,No
+james taylor,60,male,asthma,albuterol,2020-01-15,160,name@hospital.org,555-555-5555,130,85,60-74,No,No,No
+sarah johnson,35,female,Unknown,lisinopril,2020-02-20,200,contact@domain.com,098-765-4321,130,85,30-44,No,Yes,Yes
+laura martinez,35,female,asthma,lisinopril,2019-12-01,200,patient@example.com,123-456-7890,130,85,30-44,Yes,No,No
+john doe,70,female,asthma,albuterol,2020-02-20,160,contact@domain.com,098-765-4321,110,70,60-74,No,No,No
+mary clark,25,male,hypertension,none,2018-04-05,160,name@hospital.org,555-555-5555,120,80,<30,No,No,No
+emily davis,70,female,asthma,albuterol,2020-02-20,180,patient@example.com,098-765-4321,130,85,60-74,No,No,No
+john doe,25,male,hypertension,atorvastatin,2020-01-15,220,Unknown,Unknown,120,80,<30,No,Yes,Yes
+laura martinez,25,other,diabetes,none,2020-01-15,180,name@hospital.org,555-555-5555,130,85,<30,No,No,No
+john doe,40,male,Unknown,metformin,2019-12-01,180,patient@example.com,098-765-4321,140,90,30-44,Yes,No,No
+robert brown,40,other,asthma,albuterol,2019-03-25,160,Unknown,123-456-7890,110,70,30-44,No,No,No
+emily davis,40,male,hypertension,atorvastatin,2018-04-05,180,contact@domain.com,098-765-4321,110,70,30-44,No,No,No
+laura martinez,40,other,heart disease,none,2018-04-05,220,patient@example.com,123-456-7890,110,70,30-44,No,No,No
+sarah johnson,70,female,asthma,albuterol,2019-03-25,200,contact@domain.com,Unknown,110,70,60-74,Yes,No,No
+mary clark,40,other,diabetes,lisinopril,2020-01-15,200,Unknown,098-765-4321,110,70,30-44,No,No,No
+david lee,70,female,diabetes,albuterol,2020-01-15,180,patient@example.com,Unknown,110,70,60-74,No,No,No
+laura martinez,35,female,heart disease,metformin,2020-02-20,200,Unknown,555-555-5555,120,80,30-44,Yes,No,No
+jane smith,35,other,hypertension,albuterol,2019-12-01,200,name@hospital.org,123-456-7890,130,85,30-44,No,Yes,Yes
+mary clark,40,male,asthma,none,2019-12-01,180,patient@example.com,555-555-5555,110,70,30-44,No,No,No
+robert brown,70,male,diabetes,albuterol,2020-02-20,200,patient@example.com,Unknown,110,70,60-74,Yes,No,No
+david lee,40,male,hypertension,none,2019-12-01,180,contact@domain.com,Unknown,130,85,30-44,No,No,No
+robert brown,70,male,diabetes,lisinopril,2019-03-25,200,patient@example.com,098-765-4321,110,70,60-74,Yes,No,No
+david lee,40,female,hypertension,albuterol,2020-02-20,160,Unknown,Unknown,140,90,30-44,No,No,No
+jane smith,35,male,heart disease,lisinopril,2019-03-25,180,patient@example.com,123-456-7890,120,80,30-44,No,No,No
+mary clark,25,female,Unknown,lisinopril,2020-02-20,200,name@hospital.org,123-456-7890,130,85,<30,Yes,No,No
+sarah johnson,40,female,heart disease,atorvastatin,2019-12-01,200,patient@example.com,123-456-7890,130,85,30-44,No,No,No
+robert brown,40,female,heart disease,albuterol,2019-03-25,200,contact@domain.com,123-456-7890,140,90,30-44,No,No,No
+robert brown,70,other,Unknown,none,2019-03-25,160,patient@example.com,098-765-4321,110,70,60-74,No,No,No
+james taylor,35,other,Unknown,lisinopril,2019-03-25,180,Unknown,555-555-5555,120,80,30-44,No,No,No
+david lee,40,female,asthma,atorvastatin,2020-02-20,200,Unknown,Unknown,130,85,30-44,Yes,No,No
+michael wilson,70,other,asthma,albuterol,2018-04-05,180,patient@example.com,098-765-4321,120,80,60-74,Yes,No,No
+mary clark,40,male,heart disease,albuterol,2019-12-01,200,patient@example.com,123-456-7890,130,85,30-44,No,No,No
+david lee,40,male,heart disease,metformin,2019-03-25,160,name@hospital.org,098-765-4321,110,70,30-44,No,No,No
+james taylor,60,female,diabetes,metformin,2018-04-05,200,Unknown,Unknown,130,85,60-74,No,No,No
+john doe,25,male,diabetes,lisinopril,2019-12-01,200,Unknown,123-456-7890,130,85,<30,No,No,No
+david lee,60,female,asthma,metformin,2019-12-01,160,contact@domain.com,Unknown,120,80,60-74,No,Yes,Yes
+sarah johnson,35,female,asthma,lisinopril,2019-03-25,180,patient@example.com,123-456-7890,110,70,30-44,No,No,No
+mary clark,40,male,diabetes,none,2019-03-25,180,Unknown,Unknown,140,90,30-44,Yes,No,No
+james taylor,35,other,diabetes,lisinopril,2020-02-20,180,contact@domain.com,Unknown,140,90,30-44,No,No,No
+john doe,70,male,hypertension,metformin,2018-04-05,220,Unknown,555-555-5555,110,70,60-74,No,No,No
+emily davis,40,male,hypertension,none,2018-04-05,220,Unknown,555-555-5555,140,90,30-44,No,No,No
+james taylor,60,female,diabetes,metformin,2019-03-25,220,Unknown,098-765-4321,110,70,60-74,No,No,No
+emily davis,60,female,hypertension,lisinopril,2019-12-01,160,contact@domain.com,098-765-4321,140,90,60-74,No,No,No
+mary clark,60,female,Unknown,atorvastatin,2019-03-25,200,Unknown,Unknown,120,80,60-74,No,Yes,Yes
+robert brown,35,female,asthma,albuterol,2019-12-01,180,Unknown,123-456-7890,140,90,30-44,No,No,No
+james taylor,40,other,asthma,metformin,2019-12-01,180,Unknown,Unknown,130,85,30-44,Yes,No,No
+jane smith,40,other,diabetes,lisinopril,2019-03-25,220,Unknown,Unknown,110,70,30-44,No,No,No
+emily davis,70,other,heart disease,none,2020-01-15,180,Unknown,123-456-7890,120,80,60-74,No,No,No
+sarah johnson,40,female,diabetes,metformin,2018-04-05,220,name@hospital.org,123-456-7890,120,80,30-44,No,No,No
+jane smith,35,female,hypertension,metformin,2019-12-01,220,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+laura martinez,70,female,heart disease,albuterol,2019-12-01,200,Unknown,Unknown,120,80,60-74,Yes,Yes,Yes
+laura martinez,60,other,hypertension,lisinopril,2020-01-15,160,Unknown,Unknown,140,90,60-74,No,No,No
+john doe,25,female,Unknown,atorvastatin,2020-02-20,200,contact@domain.com,098-765-4321,130,85,<30,No,Yes,Yes
+robert brown,35,male,hypertension,none,2020-01-15,160,contact@domain.com,555-555-5555,120,80,30-44,No,No,No
+mary clark,35,male,Unknown,lisinopril,2020-01-15,180,contact@domain.com,Unknown,110,70,30-44,No,No,No
+james taylor,40,female,Unknown,none,2019-12-01,160,contact@domain.com,123-456-7890,110,70,30-44,No,No,No
+michael wilson,40,male,hypertension,metformin,2018-04-05,180,patient@example.com,Unknown,130,85,30-44,No,Yes,Yes
+sarah johnson,35,male,hypertension,albuterol,2020-01-15,180,Unknown,Unknown,130,85,30-44,No,Yes,Yes
+emily davis,35,other,Unknown,albuterol,2020-02-20,200,patient@example.com,555-555-5555,140,90,30-44,No,No,No
+mary clark,60,female,heart disease,atorvastatin,2019-03-25,200,Unknown,123-456-7890,130,85,60-74,Yes,No,No
+jane smith,60,female,Unknown,albuterol,2020-01-15,200,Unknown,Unknown,130,85,60-74,No,No,No
+laura martinez,70,other,asthma,metformin,2020-01-15,160,Unknown,098-765-4321,140,90,60-74,No,No,No
+sarah johnson,25,male,Unknown,atorvastatin,2020-02-20,180,Unknown,555-555-5555,130,85,<30,No,No,No
+michael wilson,40,male,heart disease,lisinopril,2018-04-05,220,contact@domain.com,Unknown,120,80,30-44,No,No,No
+james taylor,25,female,asthma,albuterol,2020-01-15,220,patient@example.com,Unknown,130,85,<30,No,No,No
+john doe,70,male,diabetes,atorvastatin,2020-01-15,180,contact@domain.com,123-456-7890,140,90,60-74,No,No,No
+michael wilson,60,other,diabetes,metformin,2018-04-05,200,Unknown,098-765-4321,130,85,60-74,No,No,No
+sarah johnson,40,other,heart disease,none,2020-02-20,180,patient@example.com,Unknown,110,70,30-44,Yes,No,No
+michael wilson,60,female,Unknown,none,2020-01-15,200,contact@domain.com,555-555-5555,120,80,60-74,No,Yes,Yes
+sarah johnson,40,other,hypertension,metformin,2018-04-05,180,Unknown,Unknown,120,80,30-44,No,No,No
+sarah johnson,60,other,heart disease,metformin,2020-01-15,180,contact@domain.com,Unknown,110,70,60-74,No,No,No
+david lee,40,female,asthma,none,2019-03-25,200,Unknown,555-555-5555,110,70,30-44,Yes,No,No
+emily davis,40,other,asthma,atorvastatin,2019-12-01,160,patient@example.com,555-555-5555,140,90,30-44,No,No,No
+laura martinez,40,other,diabetes,none,2019-03-25,160,Unknown,Unknown,130,85,30-44,No,Yes,Yes
+david lee,70,other,asthma,metformin,2020-01-15,180,patient@example.com,123-456-7890,120,80,60-74,Yes,Yes,Yes
+james taylor,40,male,heart disease,albuterol,2020-02-20,160,Unknown,555-555-5555,120,80,30-44,No,No,No
+david lee,40,female,asthma,lisinopril,2019-12-01,220,patient@example.com,Unknown,140,90,30-44,No,No,No
+robert brown,40,female,heart disease,albuterol,2019-03-25,160,Unknown,123-456-7890,120,80,30-44,No,No,No
+robert brown,25,female,hypertension,albuterol,2018-04-05,160,Unknown,123-456-7890,130,85,<30,No,No,No
+laura martinez,35,male,diabetes,metformin,2020-02-20,160,name@hospital.org,123-456-7890,110,70,30-44,No,No,No
+michael wilson,25,male,asthma,none,2019-03-25,220,patient@example.com,555-555-5555,120,80,<30,No,No,No
+emily davis,40,female,heart disease,atorvastatin,2018-04-05,160,patient@example.com,123-456-7890,110,70,30-44,No,No,No
+laura martinez,40,male,Unknown,albuterol,2020-01-15,220,contact@domain.com,Unknown,140,90,30-44,No,No,No
+sarah johnson,60,female,diabetes,none,2018-04-05,200,Unknown,123-456-7890,130,85,60-74,Yes,No,No
+jane smith,40,male,hypertension,atorvastatin,2019-03-25,200,name@hospital.org,Unknown,140,90,30-44,No,No,No
+emily davis,40,other,heart disease,albuterol,2019-03-25,180,Unknown,098-765-4321,130,85,30-44,Yes,No,No
+emily davis,40,other,hypertension,atorvastatin,2020-01-15,200,contact@domain.com,Unknown,130,85,30-44,No,No,No
+sarah johnson,40,female,hypertension,none,2018-04-05,200,name@hospital.org,555-555-5555,110,70,30-44,Yes,No,No
+sarah johnson,40,male,asthma,lisinopril,2018-04-05,200,Unknown,123-456-7890,140,90,30-44,No,No,No
+john doe,70,male,asthma,none,2020-01-15,200,name@hospital.org,123-456-7890,140,90,60-74,No,No,No
+laura martinez,40,other,heart disease,metformin,2018-04-05,180,patient@example.com,Unknown,120,80,30-44,No,No,No
+sarah johnson,35,other,Unknown,atorvastatin,2020-01-15,200,patient@example.com,123-456-7890,140,90,30-44,No,No,No
+robert brown,35,male,heart disease,lisinopril,2020-02-20,200,contact@domain.com,Unknown,120,80,30-44,No,No,No
+james taylor,40,male,Unknown,atorvastatin,2019-03-25,180,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+jane smith,70,male,hypertension,atorvastatin,2020-02-20,160,Unknown,098-765-4321,120,80,60-74,No,Yes,Yes
+laura martinez,60,male,diabetes,albuterol,2019-12-01,160,name@hospital.org,123-456-7890,120,80,60-74,No,Yes,Yes
+mary clark,40,male,heart disease,metformin,2019-12-01,180,contact@domain.com,098-765-4321,140,90,30-44,No,No,No
+robert brown,35,male,heart disease,atorvastatin,2019-12-01,220,Unknown,123-456-7890,140,90,30-44,No,No,No
+michael wilson,60,female,Unknown,none,2020-01-15,200,patient@example.com,555-555-5555,120,80,60-74,No,No,No
+sarah johnson,40,male,hypertension,none,2018-04-05,200,name@hospital.org,Unknown,130,85,30-44,No,No,No
+mary clark,60,other,hypertension,albuterol,2020-02-20,180,Unknown,555-555-5555,120,80,60-74,No,No,No
+sarah johnson,25,female,Unknown,metformin,2020-02-20,180,patient@example.com,098-765-4321,130,85,<30,No,Yes,Yes
+emily davis,35,male,hypertension,metformin,2020-02-20,220,contact@domain.com,123-456-7890,120,80,30-44,No,No,No
+robert brown,40,other,asthma,none,2020-02-20,160,Unknown,098-765-4321,130,85,30-44,No,No,No
+emily davis,40,female,diabetes,lisinopril,2019-12-01,200,patient@example.com,Unknown,140,90,30-44,Yes,No,No
+john doe,70,other,heart disease,albuterol,2020-02-20,160,Unknown,555-555-5555,120,80,60-74,No,No,No
+emily davis,40,male,diabetes,albuterol,2018-04-05,200,Unknown,098-765-4321,130,85,30-44,No,Yes,Yes
+john doe,40,male,heart disease,none,2019-12-01,180,contact@domain.com,098-765-4321,130,85,30-44,No,Yes,Yes
+john doe,70,male,asthma,none,2020-02-20,220,patient@example.com,Unknown,140,90,60-74,No,No,No
+mary clark,70,male,hypertension,lisinopril,2020-01-15,160,name@hospital.org,123-456-7890,120,80,60-74,No,No,No
+sarah johnson,40,female,Unknown,lisinopril,2019-03-25,220,patient@example.com,098-765-4321,130,85,30-44,No,No,No
+michael wilson,60,female,asthma,metformin,2019-03-25,160,Unknown,Unknown,140,90,60-74,No,No,No
+emily davis,60,other,diabetes,albuterol,2019-03-25,200,contact@domain.com,123-456-7890,120,80,60-74,No,No,No
+robert brown,70,male,Unknown,albuterol,2019-12-01,200,contact@domain.com,123-456-7890,110,70,60-74,Yes,No,No
+john doe,60,other,hypertension,none,2020-02-20,220,name@hospital.org,555-555-5555,120,80,60-74,No,Yes,Yes
+sarah johnson,25,female,asthma,metformin,2019-12-01,220,contact@domain.com,Unknown,130,85,<30,No,No,No
+jane smith,70,male,Unknown,albuterol,2018-04-05,200,contact@domain.com,123-456-7890,130,85,60-74,Yes,No,No
+laura martinez,70,male,asthma,metformin,2020-01-15,220,contact@domain.com,555-555-5555,130,85,60-74,No,No,No
+mary clark,40,female,asthma,metformin,2020-01-15,220,contact@domain.com,Unknown,130,85,30-44,No,Yes,Yes
+michael wilson,60,female,hypertension,none,2019-03-25,160,contact@domain.com,Unknown,120,80,60-74,No,No,No
+david lee,70,female,heart disease,metformin,2019-03-25,160,Unknown,Unknown,140,90,60-74,No,No,No
+mary clark,25,female,Unknown,lisinopril,2019-03-25,200,patient@example.com,123-456-7890,120,80,<30,Yes,No,No
+jane smith,40,female,hypertension,lisinopril,2020-02-20,200,Unknown,Unknown,140,90,30-44,No,No,No
+laura martinez,40,male,asthma,atorvastatin,2018-04-05,220,contact@domain.com,555-555-5555,130,85,30-44,No,No,No
+jane smith,70,female,hypertension,none,2018-04-05,200,Unknown,123-456-7890,120,80,60-74,No,No,No
+emily davis,25,male,heart disease,atorvastatin,2018-04-05,200,Unknown,Unknown,130,85,<30,Yes,No,No
+john doe,35,male,Unknown,lisinopril,2018-04-05,180,Unknown,Unknown,110,70,30-44,Yes,No,No
+michael wilson,25,female,heart disease,atorvastatin,2019-03-25,160,contact@domain.com,Unknown,130,85,<30,No,No,No
+james taylor,25,female,diabetes,none,2020-01-15,220,Unknown,123-456-7890,130,85,<30,No,No,No
+john doe,40,male,Unknown,none,2019-03-25,180,contact@domain.com,555-555-5555,140,90,30-44,No,No,No
+james taylor,40,female,heart disease,metformin,2018-04-05,200,name@hospital.org,555-555-5555,110,70,30-44,Yes,No,No
+laura martinez,35,female,asthma,albuterol,2019-03-25,220,name@hospital.org,123-456-7890,130,85,30-44,No,No,No
+sarah johnson,60,female,Unknown,metformin,2018-04-05,200,name@hospital.org,123-456-7890,130,85,60-74,No,No,No
+david lee,60,other,Unknown,none,2019-12-01,160,Unknown,098-765-4321,110,70,60-74,No,No,No
+robert brown,25,male,hypertension,lisinopril,2020-01-15,200,name@hospital.org,Unknown,110,70,<30,No,No,No
+john doe,40,other,asthma,lisinopril,2019-12-01,180,Unknown,123-456-7890,120,80,30-44,Yes,No,No
+michael wilson,40,female,diabetes,metformin,2020-02-20,200,Unknown,123-456-7890,140,90,30-44,Yes,No,No
+jane smith,60,other,heart disease,none,2019-03-25,200,Unknown,098-765-4321,110,70,60-74,No,No,No
+michael wilson,35,female,hypertension,lisinopril,2020-02-20,200,contact@domain.com,098-765-4321,110,70,30-44,Yes,No,No
+laura martinez,40,other,heart disease,none,2019-03-25,220,patient@example.com,Unknown,130,85,30-44,No,Yes,Yes
+james taylor,35,female,diabetes,lisinopril,2019-12-01,200,contact@domain.com,555-555-5555,110,70,30-44,Yes,No,No
+jane smith,70,other,diabetes,none,2018-04-05,160,contact@domain.com,Unknown,140,90,60-74,No,No,No
+robert brown,70,other,Unknown,atorvastatin,2018-04-05,220,contact@domain.com,Unknown,130,85,60-74,No,No,No
+robert brown,40,other,diabetes,none,2019-03-25,180,contact@domain.com,123-456-7890,130,85,30-44,No,No,No
+john doe,60,male,heart disease,none,2018-04-05,200,patient@example.com,098-765-4321,130,85,60-74,Yes,No,No
+laura martinez,40,other,asthma,metformin,2019-12-01,180,name@hospital.org,555-555-5555,130,85,30-44,Yes,No,No
+sarah johnson,40,male,asthma,atorvastatin,2018-04-05,160,contact@domain.com,Unknown,130,85,30-44,No,Yes,Yes
+laura martinez,70,female,Unknown,albuterol,2019-12-01,160,Unknown,555-555-5555,110,70,60-74,No,No,No
+james taylor,25,other,heart disease,metformin,2020-02-20,200,Unknown,098-765-4321,130,85,<30,No,No,No
+michael wilson,25,female,heart disease,albuterol,2019-12-01,200,Unknown,Unknown,120,80,<30,No,No,No
+robert brown,60,female,diabetes,lisinopril,2020-01-15,200,Unknown,Unknown,130,85,60-74,No,No,No
+michael wilson,40,other,heart disease,albuterol,2020-01-15,160,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+michael wilson,35,male,hypertension,none,2020-01-15,200,patient@example.com,098-765-4321,130,85,30-44,No,No,No
+michael wilson,40,other,diabetes,albuterol,2019-03-25,200,name@hospital.org,123-456-7890,130,85,30-44,No,Yes,Yes
+robert brown,25,female,hypertension,metformin,2019-03-25,180,Unknown,Unknown,140,90,<30,No,No,No
+mary clark,25,female,Unknown,metformin,2019-03-25,200,name@hospital.org,123-456-7890,140,90,<30,No,No,No
+emily davis,70,other,asthma,albuterol,2019-12-01,180,patient@example.com,098-765-4321,110,70,60-74,Yes,No,No
+james taylor,40,male,Unknown,metformin,2019-03-25,160,Unknown,Unknown,140,90,30-44,No,No,No
+mary clark,40,male,asthma,metformin,2020-02-20,220,name@hospital.org,Unknown,140,90,30-44,No,No,No
+james taylor,25,female,Unknown,albuterol,2020-01-15,180,patient@example.com,123-456-7890,120,80,<30,No,No,No
+jane smith,35,female,heart disease,atorvastatin,2019-12-01,160,name@hospital.org,Unknown,110,70,30-44,No,No,No
+laura martinez,60,male,hypertension,atorvastatin,2020-01-15,160,contact@domain.com,123-456-7890,110,70,60-74,No,No,No
+laura martinez,60,other,asthma,lisinopril,2019-03-25,180,patient@example.com,123-456-7890,140,90,60-74,Yes,No,No
+david lee,40,female,diabetes,metformin,2019-12-01,200,name@hospital.org,Unknown,140,90,30-44,No,No,No
+laura martinez,60,male,hypertension,albuterol,2018-04-05,200,contact@domain.com,098-765-4321,140,90,60-74,Yes,No,No
+robert brown,25,female,diabetes,metformin,2020-02-20,200,contact@domain.com,098-765-4321,130,85,<30,No,Yes,Yes
+sarah johnson,25,other,hypertension,none,2019-03-25,200,patient@example.com,Unknown,130,85,<30,No,No,No
+john doe,40,male,hypertension,metformin,2019-03-25,160,Unknown,555-555-5555,130,85,30-44,No,Yes,Yes
+david lee,40,female,Unknown,metformin,2020-02-20,200,Unknown,555-555-5555,110,70,30-44,No,No,No
+john doe,70,other,asthma,atorvastatin,2020-02-20,180,patient@example.com,Unknown,120,80,60-74,No,No,No
+james taylor,40,female,asthma,albuterol,2018-04-05,180,contact@domain.com,555-555-5555,130,85,30-44,No,No,No
+john doe,35,other,hypertension,metformin,2019-03-25,180,contact@domain.com,123-456-7890,120,80,30-44,No,No,No
+john doe,60,other,heart disease,atorvastatin,2019-03-25,160,patient@example.com,123-456-7890,110,70,60-74,No,No,No
+david lee,40,male,heart disease,lisinopril,2020-01-15,180,Unknown,Unknown,110,70,30-44,Yes,No,No
+jane smith,40,other,diabetes,atorvastatin,2019-12-01,220,Unknown,Unknown,120,80,30-44,No,No,No
+michael wilson,70,female,diabetes,atorvastatin,2019-12-01,200,name@hospital.org,Unknown,120,80,60-74,No,No,No
+laura martinez,40,other,Unknown,atorvastatin,2020-01-15,220,patient@example.com,Unknown,120,80,30-44,No,No,No
+laura martinez,25,other,hypertension,metformin,2019-12-01,180,Unknown,Unknown,110,70,<30,Yes,No,No
+robert brown,60,male,diabetes,metformin,2020-02-20,200,Unknown,123-456-7890,140,90,60-74,Yes,No,No
+david lee,40,other,diabetes,lisinopril,2019-12-01,160,contact@domain.com,555-555-5555,120,80,30-44,No,No,No
+robert brown,40,other,hypertension,none,2019-12-01,180,name@hospital.org,Unknown,130,85,30-44,No,No,No
+sarah johnson,60,female,Unknown,none,2020-01-15,180,patient@example.com,Unknown,110,70,60-74,No,No,No
+sarah johnson,25,male,diabetes,none,2018-04-05,200,contact@domain.com,123-456-7890,120,80,<30,Yes,Yes,Yes
+robert brown,35,male,Unknown,lisinopril,2019-12-01,160,contact@domain.com,123-456-7890,130,85,30-44,No,Yes,Yes
+david lee,70,male,asthma,none,2019-12-01,160,Unknown,123-456-7890,130,85,60-74,No,No,No
+robert brown,60,other,Unknown,none,2018-04-05,200,Unknown,555-555-5555,140,90,60-74,No,No,No
+laura martinez,60,male,heart disease,atorvastatin,2020-01-15,180,patient@example.com,Unknown,120,80,60-74,No,No,No
+mary clark,35,other,heart disease,metformin,2018-04-05,180,patient@example.com,098-765-4321,110,70,30-44,Yes,No,No
+emily davis,60,other,Unknown,metformin,2020-01-15,220,patient@example.com,098-765-4321,120,80,60-74,No,No,No
+john doe,25,female,heart disease,atorvastatin,2020-02-20,180,contact@domain.com,Unknown,110,70,<30,No,No,No
+emily davis,25,female,asthma,atorvastatin,2020-01-15,200,Unknown,Unknown,130,85,<30,No,Yes,Yes
+david lee,35,female,hypertension,atorvastatin,2020-02-20,160,name@hospital.org,Unknown,120,80,30-44,No,No,No
+emily davis,70,female,heart disease,metformin,2020-02-20,200,contact@domain.com,Unknown,130,85,60-74,Yes,No,No
+sarah johnson,40,female,heart disease,none,2020-01-15,180,name@hospital.org,555-555-5555,140,90,30-44,No,No,No
+james taylor,40,other,Unknown,atorvastatin,2019-03-25,220,Unknown,098-765-4321,130,85,30-44,No,No,No
+john doe,40,other,asthma,lisinopril,2020-01-15,200,Unknown,Unknown,140,90,30-44,No,No,No
+michael wilson,60,male,hypertension,atorvastatin,2019-12-01,200,patient@example.com,098-765-4321,120,80,60-74,No,No,No
+david lee,40,other,Unknown,albuterol,2019-12-01,180,name@hospital.org,098-765-4321,120,80,30-44,No,No,No
+john doe,35,other,Unknown,atorvastatin,2019-03-25,220,contact@domain.com,123-456-7890,140,90,30-44,No,No,No
+emily davis,35,female,asthma,metformin,2020-02-20,200,name@hospital.org,Unknown,130,85,30-44,No,Yes,Yes
+sarah johnson,70,other,hypertension,atorvastatin,2019-03-25,180,Unknown,Unknown,110,70,60-74,Yes,No,No
+jane smith,40,female,asthma,albuterol,2019-12-01,200,patient@example.com,Unknown,130,85,30-44,No,No,No
+mary clark,25,male,hypertension,lisinopril,2019-03-25,220,name@hospital.org,123-456-7890,130,85,<30,No,No,No
+michael wilson,40,male,asthma,none,2020-01-15,160,Unknown,555-555-5555,130,85,30-44,No,No,No
+mary clark,60,other,Unknown,atorvastatin,2019-03-25,160,contact@domain.com,555-555-5555,120,80,60-74,No,No,No
+john doe,25,male,Unknown,albuterol,2020-02-20,180,Unknown,Unknown,130,85,<30,No,No,No
+sarah johnson,35,other,diabetes,albuterol,2020-01-15,220,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+sarah johnson,40,male,heart disease,lisinopril,2018-04-05,200,patient@example.com,555-555-5555,110,70,30-44,No,No,No
+emily davis,40,female,asthma,metformin,2019-12-01,200,contact@domain.com,Unknown,140,90,30-44,No,No,No
+laura martinez,70,female,diabetes,atorvastatin,2019-12-01,160,contact@domain.com,098-765-4321,120,80,60-74,No,No,No
+emily davis,40,female,heart disease,albuterol,2019-03-25,160,contact@domain.com,555-555-5555,110,70,30-44,No,No,No
+laura martinez,70,female,asthma,lisinopril,2020-01-15,200,contact@domain.com,555-555-5555,120,80,60-74,Yes,Yes,Yes
+laura martinez,60,other,hypertension,none,2018-04-05,160,patient@example.com,123-456-7890,120,80,60-74,No,No,No
+michael wilson,40,male,heart disease,albuterol,2020-01-15,180,Unknown,Unknown,120,80,30-44,Yes,No,No
+emily davis,40,other,Unknown,lisinopril,2019-12-01,200,name@hospital.org,123-456-7890,110,70,30-44,No,No,No
+jane smith,40,female,diabetes,metformin,2020-01-15,200,Unknown,Unknown,130,85,30-44,Yes,Yes,Yes
+robert brown,40,other,heart disease,metformin,2018-04-05,180,name@hospital.org,098-765-4321,140,90,30-44,Yes,No,No
+robert brown,40,male,heart disease,albuterol,2019-03-25,180,name@hospital.org,Unknown,110,70,30-44,No,No,No
+emily davis,60,other,Unknown,albuterol,2020-02-20,160,Unknown,123-456-7890,120,80,60-74,No,Yes,Yes
+emily davis,25,male,asthma,atorvastatin,2020-01-15,200,patient@example.com,555-555-5555,120,80,<30,Yes,No,No
+mary clark,60,other,hypertension,lisinopril,2020-02-20,200,Unknown,555-555-5555,120,80,60-74,No,Yes,Yes
+michael wilson,70,male,Unknown,albuterol,2019-12-01,220,patient@example.com,Unknown,120,80,60-74,No,No,No
+emily davis,60,male,hypertension,atorvastatin,2019-03-25,200,name@hospital.org,555-555-5555,110,70,60-74,Yes,No,No
+mary clark,70,female,asthma,atorvastatin,2019-03-25,160,patient@example.com,123-456-7890,110,70,60-74,No,No,No
+laura martinez,40,male,heart disease,albuterol,2020-01-15,180,Unknown,123-456-7890,130,85,30-44,No,No,No
+sarah johnson,25,female,hypertension,metformin,2019-03-25,200,Unknown,555-555-5555,130,85,<30,No,No,No
+sarah johnson,40,female,diabetes,lisinopril,2020-01-15,180,Unknown,555-555-5555,130,85,30-44,No,No,No
+laura martinez,35,female,diabetes,lisinopril,2020-01-15,220,name@hospital.org,Unknown,110,70,30-44,No,No,No
+david lee,40,other,Unknown,metformin,2020-02-20,180,Unknown,098-765-4321,140,90,30-44,Yes,No,No
+mary clark,70,other,asthma,albuterol,2019-03-25,180,name@hospital.org,Unknown,110,70,60-74,Yes,No,No
+mary clark,40,other,Unknown,lisinopril,2020-01-15,160,Unknown,123-456-7890,130,85,30-44,No,Yes,Yes
+laura martinez,40,other,Unknown,albuterol,2020-02-20,180,name@hospital.org,Unknown,110,70,30-44,Yes,No,No
+jane smith,25,male,Unknown,albuterol,2018-04-05,200,Unknown,Unknown,110,70,<30,No,No,No
+james taylor,40,male,diabetes,atorvastatin,2020-02-20,220,Unknown,123-456-7890,120,80,30-44,No,No,No
