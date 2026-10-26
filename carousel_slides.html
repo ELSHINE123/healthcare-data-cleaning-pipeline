@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clinical EHR Data Cleaning Pipeline - Daniel .A. Dongo</title>
+<style>
+  @page {
+    size: 1080px 1080px;
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 1080px;
+    background: #F8FAFC;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1E293B;
+    -webkit-font-smoothing: antialiased;
+  }
+  .slide {
+    width: 1080px;
+    height: 1080px;
+    padding: 55px 65px;
+    position: relative;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide:last-child {
+    page-break-after: avoid;
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .progress-bg {
+    width: 100%;
+    height: 5px;
+    background: #E2E8F0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 18px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #0A66C2;
+    border-radius: 3px;
+  }
+  .category-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #E0F2FE;
+    color: #0A66C2;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Typography */
+  .slide-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.2;
+    margin-top: 10px;
+    letter-spacing: -0.5px;
+  }
+  .slide-subtitle {
+    font-size: 16px;
+    color: #64748B;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+  
+  /* Content Area */
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    margin: 15px 0;
+  }
+  
+  /* Cards */
+  .grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0F172A;
+  }
+  .tag {
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 12px;
+  }
+  .tag-blue { background: #E0F2FE; color: #0284C7; }
+  .tag-green { background: #DCFCE7; color: #16A34A; }
+  .tag-red { background: #FEE2E2; color: #DC2626; }
+  .tag-purple { background: #EDE9FE; color: #7C3AED; }
+  
+  .card-body {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+  }
+  .card-body ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .card-body li {
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 16px;
+  }
+  .card-body li::before {
+    content: "•";
+    color: #0A66C2;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Callout Banner */
+  .callout-blue {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 14px;
+    padding: 18px 24px;
+  }
+  .callout-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0A66C2;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .callout-text {
+    font-size: 14.5px;
+    color: #1E293B;
+    line-height: 1.45;
+  }
+  .callout-bold {
+    font-weight: 700;
+    color: #059669;
+  }
+
+  /* Architecture Step Cards */
+  .step-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+  .step-num {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: #E0F2FE;
+    color: #0A66C2;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-content h4 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 4px;
+  }
+  .step-content p {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  /* Code Terminal Box */
+  .terminal {
+    background: #0F172A;
+    border: 1px solid #1E293B;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .terminal-header {
+    background: #1E293B;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .dots {
+    display: flex;
+    gap: 6px;
+  }
+  .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+  .dot-red { background: #EF4444; }
+  .dot-yellow { background: #F59E0B; }
+  .dot-green { background: #10B981; }
+  .terminal-title {
+    color: #94A3B8;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+  .terminal-body {
+    padding: 18px 22px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+  .c-comment { color: #64748B; }
+  .c-var { color: #38BDF8; }
+  .c-kw { color: #F472B6; }
+  .c-fn { color: #34D399; }
+  .c-str { color: #FBBF24; }
+  .c-num { color: #A78BFA; }
+
+  /* Metric Stat Cards */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .stat-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 175px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+  }
+  .stat-value {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+  }
+  .stat-value-blue { color: #0A66C2; }
+  .stat-value-green { color: #059669; }
+  .stat-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-top: 4px;
+  }
+  .stat-desc {
+    font-size: 13.5px;
+    color: #334155;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+
+  /* Output Callout Banner */
+  .output-banner {
+    background: #F0FDF4;
+    border: 1.5px solid #BBF7D0;
+    border-radius: 14px;
+    padding: 20px 24px;
+  }
+  .output-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #059669;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .output-banner ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .output-banner li {
+    font-size: 14px;
+    color: #0F172A;
+    margin-bottom: 6px;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .output-banner li::before {
+    content: "✓";
+    color: #059669;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  /* CTA Banner on Slide 7 */
+  .cta-banner {
+    background: #0A66C2;
+    border-radius: 16px;
+    padding: 26px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(10, 102, 194, 0.25);
+  }
+  .cta-left h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #BFDBFE;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+  }
+  .cta-left .cta-repo {
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+  }
+  .cta-left .cta-author {
+    font-size: 13px;
+    color: #DBEAFE;
+  }
+  .cta-btn {
+    background: #FFFFFF;
+    color: #0A66C2;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /* Footer Bar */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 16px;
+    font-size: 13px;
+    color: #64748B;
+  }
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-author {
+    font-weight: 700;
+    color: #0F172A;
+  }
+  .footer-num {
+    font-weight: 700;
+    color: #0A66C2;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== SLIDE 1: COVER ==================== -->
+  <div class="slide">
+    <div class="top-bar">
+      <div class="category-pill">Healthcare Data Engineering • Case Study</div>
+    </div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+      <div>
+        <h1 style="font-size: 42px; font-weight: 900; color: #0F172A; line-height: 1.15; letter-spacing: -0.8px;">
+          Clinical EHR Data Cleaning & Cascading Imputation
+        </h1>
+        <p style="font-size: 17px; color: #475569; margin-top: 14px; line-height: 1.5; max-width: 900px;">
+          How I transformed 1,000 unstandardized Electronic Health Records into an audit-compliant, zero-null clinical dataset in Python & Pandas.
+        </p>
+      </div>
+
+      <!-- 3 Metrics in Row -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin: 15px 0;">
+        <div style="background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);">
+          <div style="font-size: 32px; font-weight: 900; color: #059669;">98.3%</div>
+          <div style="font-size: 12px; font-weight: 700; color: #64748B; margin-top: 4px; text-transform: uppercase;">Cohort Preserved</div>
+          <p style="font-size: 13px; color: #334155; margin-top: 8px; line-height: 1.4;">17 unrecoverable ghost records safely pruned</p>
+        </div>
+        <div style="background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);">
+          <div style="font-size: 32px; font-weight: 900; color: #0A66C2;">100%</div>
+          <div style="font-size: 12px; font-weight: 700; color: #64748B; margin-top: 4px; text-transform: uppercase;">Null Resolution</div>
+          <p style="font-size: 13px; color: #334155; margin-top: 8px; line-height: 1.4;">1,325 missing fields cleanly cleaned & imputed</p>
+        </div>
+        <div style="background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);">
+          <div style="font-size: 32px; font-weight: 900; color: #7C3AED;">HIPAA</div>
+          <div style="font-size: 12px; font-weight: 700; color: #64748B; margin-top: 4px; text-transform: uppercase;">Audit Provenance</div>
+          <p style="font-size: 13px; color: #334155; margin-top: 8px; line-height: 1.4;">100% auditable via explicit Yes/No flags</p>
+        </div>
+      </div>
+
+      <!-- Author Bar -->
+      <div style="background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 20px 26px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-size: 17px; font-weight: 800; color: #0F172A;">Daniel .A. Dongo</div>
+          <div style="font-size: 13.5px; color: #0A66C2; margin-top: 2px;">Data Analyst & Engineer • Python • Pandas • Healthcare Analytics</div>
+        </div>
+        <div style="font-size: 14px; font-weight: 800; color: #0A66C2; display: flex; align-items: center; gap: 6px;">
+          SWIPE TO EXPLORE ➡️
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <span class="footer-author">Daniel .A. Dongo</span>
+        <span>• github.com/ELSHINE123/healthcare-data-cleaning-pipeline</span>
+      </div>
+      <div class="footer-num">1 / 7</div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 2: THE CHALLENGE ==================== -->
+  <div class="slide">
+    <div class="top-bar">
+      <div class="progress-bg"><div class="progress-fill" style="width: 28.5%;"></div></div>
+      <div class="category-pill">01 • Problem Statement</div>
+      <h2 class="slide-title">The Challenge: Real-World EHR Data is Messy</h2>
+      <p class="slide-subtitle">Why naive data cleaning breaks downstream medical machine learning.</p>
+    </div>
+
+    <div class="content">
+      <div class="grid-2x2">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">1. Composite Vitals</span>
+            <span class="tag tag-blue">Formatting</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Blood pressure stored as text string (e.g. <code>"120/80"</code>).</li>
+              <li>Whitespace corruption prevents numeric analysis.</li>
+              <li>Required vectorized decomposition into systolic and diastolic.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">2. Corrupted Types</span>
+            <span class="tag tag-red">Data Types</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>The <code>age</code> column contained verbal words (<code>"forty"</code>).</li>
+              <li>Decimal floats on completed integer patient years.</li>
+              <li>Required strict type coercion and nullable <code>Int64</code> casting.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">3. Polymorphic Dates</span>
+            <span class="tag tag-green">Parsing</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Dates recorded with inconsistent syntax across visits.</li>
+              <li>Mixed delimiters (<code>"2023_04_15"</code> vs <code>"15-Apr-2023"</code>).</li>
+              <li>Standardized 100% of dates using fuzzy token parsing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">4. The "Ghost Patient" Risk</span>
+            <span class="tag tag-red">Clinical Risk</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Blind imputation on empty records fabricates synthetic patients.</li>
+              <li>Naive listwise deletion drops nearly 10% of real patients.</li>
+              <li>Needed an objective clinical triage rule to preserve power.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout-blue">
+        <div class="callout-title">Core Clinical Dilemma:</div>
+        <div class="callout-text">
+          How do we resolve 1,325 missing values across 1,000 records without inventing synthetic patients or destroying statistical power?<br>
+          <span class="callout-bold">Solution: Domain-driven triage filter + stratified cascading median imputation.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <span class="footer-author">Daniel .A. Dongo</span>
+        <span>• github.com/ELSHINE123/healthcare-data-cleaning-pipeline</span>
+      </div>
+      <div class="footer-num">2 / 7</div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 3: ARCHITECTURE ==================== -->
+  <div class="slide">
+    <div class="top-bar">
+      <div class="progress-bg"><div class="progress-fill" style="width: 42.8%;"></div></div>
+      <div class="category-pill">02 • Pipeline Architecture</div>
+      <h2 class="slide-title">End-to-End Pipeline Workflow</h2>
+      <p class="slide-subtitle">A 5-stage production framework engineered for clinical reproducibility.</p>
+    </div>
+
+    <div class="content" style="gap: 12px;">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h4>Text Normalization & Vital Splitting</h4>
+          <p>Decomposed composite <code>blood_pressure</code> into numeric <code>systolic_bp</code> & <code>diastolic_bp</code>. Fixed typos (<code>"forty"</code> ➔ 40) and stripped all whitespace.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h4>Resilient Timestamp Standardization</h4>
+          <p>Applied <code>dateutil.parser</code> with <code>fuzzy=True</code> to resolve polymorphic delimiters, converting 100% of dates to <code>datetime64[ns]</code> without data loss.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h4>The "Ghost Patient" Triage Filter</h4>
+          <p>Audited 4 core clinical vitals (age, blood pressure, condition, cholesterol). Pruned 17 unrecoverable records (1.70% data loss) to prevent synthetic profile hallucination.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h4>Hierarchical Cascading Median Imputation</h4>
+          <p>3-tier stratified fallback: <code>(Age Group + Gender)</code> ➔ <code>Gender Median</code> ➔ <code>Global Median</code>. Preserves biological variance across demographics.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <h4>Regulatory Audit Flags & Anomaly Review</h4>
+          <p>Created explicit provenance flags (<code>*_imputed</code>) mapped to <code>'Yes'</code>/<code>'No'</code> for FDA/HIPAA compliance. Audited physiological bounds and IQR outliers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <span class="footer-author">Daniel .A. Dongo</span>
+        <span>• github.com/ELSHINE123/healthcare-data-cleaning-pipeline</span>
+      </div>
+      <div class="footer-num">3 / 7</div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 4: CODE SNAPSHOT 1 ==================== -->
+  <div class="slide">
+    <div class="top-bar">
+      <div class="progress-bg"><div class="progress-fill" style="width: 57.1%;"></div></div>
+      <div class="category-pill">03 • Code Implementation</div>
+      <h2 class="slide-title">Snapshot: Vital Decomposition & Triage</h2>
+      <p class="slide-subtitle">Vectorized Pandas operations for feature extraction and row filtering.</p>
+    </div>
+
+    <div class="content" style="gap: 18px;">
+      <!-- Code Box 1 -->
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div>
+          <div class="terminal-title">1. Vectorized Blood Pressure Splitting (Cells 21–24)</div>
+        </div>
+        <div class="terminal-body">
+<span class="c-comment"># 1. Split composite slash-delimited blood pressure string</span>
+<span class="c-var">df</span>[[<span class="c-str">'systolic_bp'</span>, <span class="c-str">'diastolic_bp'</span>]] = <span class="c-var">df</span>[<span class="c-str">'blood_pressure'</span>].<span class="c-var">str</span>.<span class="c-fn">split</span>(<span class="c-str">'/'</span>, expand=<span class="c-kw">True</span>)
+
+<span class="c-comment"># 2. Strip whitespace and safely coerce non-numeric entries</span>
+<span class="c-var">df</span>[<span class="c-str">'systolic_bp'</span>] = <span class="c-var">pd</span>.<span class="c-fn">to_numeric</span>(<span class="c-var">df</span>[<span class="c-str">'systolic_bp'</span>].<span class="c-var">str</span>.<span class="c-fn">strip</span>(), errors=<span class="c-str">'coerce'</span>)
+<span class="c-var">df</span>[<span class="c-str">'diastolic_bp'</span>] = <span class="c-var">pd</span>.<span class="c-fn">to_numeric</span>(<span class="c-var">df</span>[<span class="c-str">'diastolic_bp'</span>].<span class="c-var">str</span>.<span class="c-fn">strip</span>(), errors=<span class="c-str">'coerce'</span>)
+
+<span class="c-comment"># 3. Cast to nullable integer to preserve clean schema</span>
+<span class="c-var">df</span>[[<span class="c-str">'systolic_bp'</span>, <span class="c-str">'diastolic_bp'</span>]] = <span class="c-var">df</span>[[<span class="c-str">'systolic_bp'</span>, <span class="c-str">'diastolic_bp'</span>]].<span class="c-fn">round</span>().<span class="c-fn">astype</span>(<span class="c-str">'Int64'</span>)
+        </div>
+      </div>
+
+      <!-- Code Box 2 -->
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div>
+          <div class="terminal-title">2. Clinical Triage Filter: Pruning Ghost Patients (Cells 27–32)</div>
+        </div>
+        <div class="terminal-body">
+<span class="c-comment"># Define core clinical diagnostic markers</span>
+<span class="c-var">critical_columns</span> = [<span class="c-str">'age'</span>, <span class="c-str">'blood_pressure'</span>, <span class="c-str">'condition'</span>, <span class="c-str">'cholesterol'</span>]
+
+<span class="c-comment"># Count missing critical values per patient</span>
+<span class="c-var">missing_per_row</span> = <span class="c-var">df</span>[<span class="c-var">critical_columns</span>].<span class="c-fn">isna</span>().<span class="c-fn">sum</span>(axis=<span class="c-num">1</span>)
+
+<span class="c-comment"># Prune patients missing >=3 core markers (17 rows / 1.70%)</span>
+<span class="c-comment"># Avoids 'inventing patients' while preserving 98.3% of the cohort</span>
+<span class="c-var">df</span> = <span class="c-var">df</span>[<span class="c-var">missing_per_row</span> &lt; <span class="c-num">3</span>].<span class="c-fn">copy</span>()
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <span class="footer-author">Daniel .A. Dongo</span>
+        <span>• github.com/ELSHINE123/healthcare-data-cleaning-pipeline</span>
+      </div>
+      <div class="footer-num">4 / 7</div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 5: CODE SNAPSHOT 2 ==================== -->
+  <div class="slide">
+    <div class="top-bar">
+      <div class="progress-bg"><div class="progress-fill" style="width: 71.4%;"></div></div>
+      <div class="category-pill">04 • Code Implementation</div>
+      <h2 class="slide-title">Snapshot: Cascading Imputation</h2>
+      <p class="slide-subtitle">Stratified median hierarchy preserving demographic variation.</p>
+    </div>
+
+    <div class="content" style="gap: 16px;">
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="dots"><div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div></div>
+          <div class="terminal-title">3. Hierarchical Cascading Median Imputation & Audit Tracking (Cells 39–50)</div>
+        </div>
+        <div class="terminal-body" style="font-size: 13px; line-height: 1.5;">
+<span class="c-var">imputed_cols</span> = [<span class="c-str">'systolic_bp'</span>, <span class="c-str">'diastolic_bp'</span>, <span class="c-str">'cholesterol'</span>]
+
+<span class="c-kw">for</span> <span class="c-var">col</span> <span class="c-kw">in</span> <span class="c-var">imputed_cols</span>:
+    <span class="c-var">df</span>[<span class="c-var">col</span>] = <span class="c-var">pd</span>.<span class="c-fn">to_numeric</span>(<span class="c-var">df</span>[<span class="c-var">col</span>], errors=<span class="c-str">'coerce'</span>)
+    
+    <span class="c-comment"># Tier 1: Demographic subgroup median (Age Bracket + Biological Sex)</span>
+    <span class="c-var">subgroup_med</span> = <span class="c-var">df</span>.<span class="c-fn">groupby</span>([<span class="c-str">'age_group'</span>, <span class="c-str">'gender'</span>], observed=<span class="c-kw">False</span>)[<span class="c-var">col</span>].<span class="c-fn">transform</span>(<span class="c-str">'median'</span>)
+    
+    <span class="c-comment"># Tier 2: Biological sex fallback median</span>
+    <span class="c-var">gender_med</span>   = <span class="c-var">df</span>.<span class="c-fn">groupby</span>(<span class="c-str">'gender'</span>, observed=<span class="c-kw">False</span>)[<span class="c-var">col</span>].<span class="c-fn">transform</span>(<span class="c-str">'median'</span>)
+    
+    <span class="c-comment"># Tier 3: Global population median</span>
+    <span class="c-var">global_med</span>   = <span class="c-var">df</span>[<span class="c-var">col</span>].<span class="c-fn">median</span>()
+    
+    <span class="c-comment"># Apply cascade fallback</span>
+    <span class="c-var">df</span>[<span class="c-var">col</span>] = <span class="c-var">df</span>[<span class="c-var">col</span>].<span class="c-fn">fillna</span>(<span class="c-var">subgroup_med</span>).<span class="c-fn">fillna</span>(<span class="c-var">gender_med</span>).<span class="c-fn">fillna</span>(<span class="c-var">global_med</span>)
+
+<span class="c-comment"># Convert boolean audit flags to regulatory 'Yes' / 'No' string labels</span>
+<span class="c-var">bool_cols</span> = <span class="c-var">df</span>.<span class="c-fn">select_dtypes</span>(include=<span class="c-str">'bool'</span>).<span class="c-var">columns</span>
+<span class="c-var">df</span>[<span class="c-var">bool_cols</span>] = <span class="c-var">df</span>[<span class="c-var">bool_cols</span>].<span class="c-fn">replace</span>({<span class="c-kw">True</span>: <span class="c-str">'Yes'</span>, <span class="c-kw">False</span>: <span class="c-str">'No'</span>})
+        </div>
+      </div>
+
+      <div class="callout-blue">
+        <div class="callout-title">Why Hierarchical Medians Over Global Means?</div>
+        <div class="callout-text">
+          A 25-year-old female and a 75-year-old male have completely different healthy vital baselines.<br>
+          <span class="callout-bold">Stratifying by age bracket and biological sex preserves genuine clinical distributions.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <span class="footer-author">Daniel .A. Dongo</span>
+        <span>• github.com/ELSHINE123/healthcare-data-cleaning-pipeline</span>
+      </div>
+      <div class="footer-num">5 / 7</div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 6: RESULTS & IMPACT ==================== -->
+  <div class="slide">
+    <div class="top-bar">
+      <div class="progress-bg"><div class="progress-fill" style="width: 85.7%;"></div></div>
+      <div class="category-pill">05 • Business & Clinical Impact</div>
+      <h2 class="slide-title">Results: Before vs. After</h2>
+      <p class="slide-subtitle">100% missing data resolution with verified clinical integrity.</p>
+    </div>
+
+    <div class="content" style="gap: 16px;">
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div>
+            <div class="stat-value stat-value-blue">1,000 ➔ 983</div>
+            <div class="stat-label">Patients Retained</div>
+          </div>
+          <div class="stat-desc">98.3% of the patient cohort preserved; 17 unrecoverable ghost profiles pruned.</div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-value stat-value-green">1,325 ➔ 0</div>
+            <div class="stat-label">Missing Values</div>
+          </div>
+          <div class="stat-desc">100% missing values resolved across all 15 clinical and demographic columns.</div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-value stat-value-blue">0% ➔ 100%</div>
+            <div class="stat-label">Vitals Usability</div>
+          </div>
+          <div class="stat-desc">Blood pressure decomposed into numeric systolic & diastolic columns for risk scoring.</div>
+        </div>
+
+        <div class="stat-card">
+          <div>
+            <div class="stat-value stat-value-green">100% Auditable</div>
+            <div class="stat-label">Regulatory Lineage</div>
+          </div>
+          <div class="stat-desc">All imputed cells tracked via explicit Yes/No flags adhering to HIPAA/GAMP standards.</div>
+        </div>
+      </div>
+
+      <div class="output-banner">
+        <div class="output-title">EXPORTED DELIVERABLE: cleaned_healthcare_data.csv (983 Rows × 15 Columns)</div>
+        <ul>
+          <li><strong>Production-Grade Schema:</strong> Zero nulls remaining, validated data types, normalized categorical labels.</li>
+          <li><strong>Predictive Analytics Ready:</strong> Clinical vitals, demographic brackets, and time-series visit dates ready for ML models.</li>
+          <li><strong>Auditable Lineage:</strong> Transparent provenance tracking ensuring compliance with FDA 21 CFR Part 11.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <span class="footer-author">Daniel .A. Dongo</span>
+        <span>• github.com/ELSHINE123/healthcare-data-cleaning-pipeline</span>
+      </div>
+      <div class="footer-num">6 / 7</div>
+    </div>
+  </div>
+
+  <!-- ==================== SLIDE 7: TAKEAWAYS & CTA ==================== -->
+  <div class="slide">
+    <div class="top-bar">
+      <div class="progress-bg"><div class="progress-fill" style="width: 100%;"></div></div>
+      <div class="category-pill">06 • Summary & Open Source</div>
+      <h2 class="slide-title">Key Takeaways & Repository</h2>
+      <p class="slide-subtitle">Core engineering lessons and link to the open-source repository.</p>
+    </div>
+
+    <div class="content" style="gap: 16px;">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">1. Clinical Domain Rules &gt; Generic Data Cleaning</span>
+          <span class="tag tag-blue">Lesson 1</span>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>Healthcare data cannot be treated like generic e-commerce clickstream data.</li>
+            <li>Imputing everything blindly invents patients; naive listwise deletion destroys real patients.</li>
+            <li>Objective triage filters based on core vitals strike the optimal statistical balance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">2. Explainability Matters in Regulated Environments</span>
+          <span class="tag tag-green">Lesson 2</span>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>Stratified cascading medians are fast, 100% explainable, and have zero model-drift overhead.</li>
+            <li>Explicit boolean audit flags (<code>*_imputed</code>) ensure compliance with HIPAA and FDA 21 CFR.</li>
+            <li>Essential for medical AI models where training data provenance is heavily audited.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <div class="cta-left">
+          <h3>Explore the Full Open-Source Project:</h3>
+          <div class="cta-repo">github.com/ELSHINE123/healthcare-data-cleaning-pipeline</div>
+          <div class="cta-author">Developed by: <strong>Daniel .A. Dongo</strong> • linkedin.com/in/daniel-dongo</div>
+        </div>
+        <a class="cta-btn" href="https://github.com/ELSHINE123/healthcare-data-cleaning-pipeline" target="_blank">
+          VIEW REPO ⭐️
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <span class="footer-author">Daniel .A. Dongo</span>
+        <span>• github.com/ELSHINE123/healthcare-data-cleaning-pipeline</span>
+      </div>
+      <div class="footer-num">7 / 7</div>
+    </div>
+  </div>
+
+</body>
+</html>
