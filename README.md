@@ -138,10 +138,10 @@ The cleaned dataset will automatically export to `cleaned_healthcare_data.csv`.
 
 ## 👤 Author & Contact
 
-* **Developer:** [Your Name]
-* **LinkedIn:** [Your LinkedIn Profile URL]
-* **GitHub:** [Your GitHub Profile URL]
-* **Portfolio:** [Your Portfolio Website]
+* **Developer:** Daniel .A. Dongo
+* **LinkedIn:** https://www.linkedin.com/in/daniel-dongo
+* **GitHub:** https://github.com/ELSHINE123
+* **Portfolio:** Coming Soon
 
 ---
 
