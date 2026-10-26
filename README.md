@@ -8,6 +8,10 @@
 
 > A production-grade, domain-informed data cleaning and validation pipeline designed to resolve messy Electronic Health Record (EHR) data, eliminate invalid synthetic profiles, and prepare clinical records for downstream machine learning and analytical modeling.
 
+<p align="center">
+  <img src="assets/pipeline_banner.jpg" alt="Clinical EHR Healthcare Data Cleaning & Imputation Pipeline" width="100%">
+</p>
+
 ---
 
 ## 📌 Executive Summary
